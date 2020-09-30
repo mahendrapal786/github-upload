@@ -6,59 +6,6 @@ get_header();
 global $post;
 $pageName=get_the_title($post->ID);
 ?>
-
-<?php 
-/*$job_args = array( 'post_type' => 'jobpost', 'post_status' => 'publish', 'posts_per_page' => -1, 'order' => 'DESC' );
-$jobs = new WP_Query( $job_args ); 
-
-if ( $jobs->have_posts() ) :
-foreach($jobs->posts as $job) {
-
-	
-    $job_id=$job->ID;
-	$job_title=$job->post_title;
-	$job_description=$job->post_content;
-
-	$jobpost_category = get_the_terms( $job_id, 'jobpost_category' );
-	$categories ='';
-	foreach($jobpost_category as $category_single) {
-	     $categories .= ucfirst($category_single->slug).', ';
-	}
-	$category = rtrim($categories, ', ');
-	echo '<div class="job_category">Job Category: '.$category.'</div>';
-	echo '<br>';
-
-	$jobpost_job_type = get_the_terms( $job_id, 'jobpost_job_type' );
-	$types ='';
-	foreach($jobpost_job_type as $jobtype_single) {
-	     $types .= ucfirst($jobtype_single->slug).', ';
-	}
-	$type = rtrim($types, ', ');
-	echo '<div class="job_type">Job Type: '.$type.'</div>';
-	echo '<br>';
-
-	$jobpost_location = get_the_terms( $job_id, 'jobpost_location' );
-	$locations ='';
-	foreach($jobpost_location as $joblocation_single) {
-	     $locations .= ucfirst($joblocation_single->slug).', ';
-	}
-	$location = rtrim($locations, ', ');
-	echo '<div class="job_location">Job Location: '.$location.'</div>';
-	echo '<br>';
-    
-    
-
-    echo '<h6 class="job_title">'.$job_title.'</h6>';
-
-    echo $job_description;
-
-    echo '<hr>';
-
-}
-
-	endif;*/
-
-?>
 <section class="banner about-banner" style="background-image:url(<?php echo get_template_directory_uri(); ?>/assets/images/contact_banner.png)">
     <div class="container">
       <div class="row">
@@ -76,7 +23,7 @@ foreach($jobs->posts as $job) {
       </div>
     </div>
   </section>
-  <?php 
+               <?php 
                     global $wpdb;
                     
                     if (isset($_GET['page'])) {
@@ -87,8 +34,7 @@ foreach($jobs->posts as $job) {
 
                     $post_per_page = 10;
                     $offset = ($paged - 1)*$post_per_page;
-
-                   /* $search_query = "SELECT p.post_title, p.post_excerpt, p.ID FROM wp_posts p JOIN wp_postmeta m1 ON p.ID = m1.post_id WHERE (p.post_title LIKE '%{$s}%' OR m1.meta_key = 'jobpost_location' and m1.meta_value = LIKE '%{$s}%' OR m1.meta_key = 'jobpost_type' and m1.meta_value = LIKE '%{$s}%' OR m1.meta_key = 'jobpost_skills' and m1.meta_value = LIKE '%{$s}%') AND  p.post_status = 'publish' AND p.post_type = 'jobpost' GROUP BY p.ID";*/
+                   
                    $search_query = "SELECT ID, post_title, post_content from wp_posts where post_status='publish' AND post_type = 'jobpost' order by ID DESC";
 
                    $total_record = count($wpdb->get_results($search_query, ARRAY_A));
@@ -106,7 +52,7 @@ foreach($jobs->posts as $job) {
   <section class="search-section">
     <div class="container">
       <div class="seatch-cnt">
-        <input type="text" class="form-control" placeholder="Search Job Listings by Title, Skills, Location or Keyword" />
+        <input type="text" class="form-control job_title_search" placeholder="Search Job Listings by Title, Skills, Location or Keyword" name="s" autocomplete="off" />
       </div>
     </div>
   </section>
@@ -123,7 +69,7 @@ foreach($jobs->posts as $job) {
           <h4>Type</h4>
         </div>
       </div>
-      <div class="accordion" id="accordionExample">
+      <div class="accordion job_searh_response" id="accordionExample">
    <?php 
 
    $number=1;
@@ -139,16 +85,20 @@ foreach($jobs->posts as $job) {
     $type=get_post_meta( $job_id, 'jobpost_type', true );
     $skills=get_post_meta( $job_id, 'jobpost_skills', true );
     $rate=get_post_meta( $job_id, 'rate', true );
+    $company_name=get_post_meta( $job_id, 'company_name', true );
 
     ?>   
 <div class="card">
-<div class="card-header" id="heading<?php echo $job_id; ?>">
+<div class="card-header" id="heading<?php echo $job_id; ?>" currentTab="<?php echo $job_id; ?>">
 <div class="btn btn-link btn-block text-left collapce-inner collapsed" type="button" data-toggle="collapse" data-target="#collapse<?php echo $job_id; ?>" aria-expanded="true" aria-controls="collapse<?php echo $job_id; ?>">
 <div class="row align-items-center">
 <div class="col-md-5">
 <div class="item">
 <h6 class="job-tittle"><?php echo $job_title; ?></h6>
-<p class="job-s mb-0">Harmonic Inc.</p>
+<?php if(!empty($company_name)) {
+  echo '<p class="job-s mb-0">'.$company_name.'</p>';
+} 
+?>
 </div>
 </div>
 <div class="col-md-2">
@@ -160,7 +110,7 @@ foreach($jobs->posts as $job) {
 <p><?php echo $type; ?></p>
 </div>
 <div class="col-auto">
-<button type="submit" class="btn btn-outline-primary w-100" onclick="request_job(<?php echo $job_id; ?>);">Apply Now</button>
+<button type="submit" class="btn btn-outline-primary w-100">Apply Now</button>
 </div>
 </div>
 </div>
@@ -206,10 +156,11 @@ echo '</div>';
 </div>
 <div class="form-wrapper">
 	<div class="job_hidden_info_<?php echo $job_id; ?> d-none">
-		<div class="jobtitle"><?php echo $job_title; ?></div>
+    <div class="jobtitle"><?php echo $job_title; ?></div>
 		<div class="joblocation"><?php echo $location; ?></div>
 		<div class="jobtype"><?php echo $type; ?></div>
-		
+    <div class="jobskills"><?php echo $skills; ?></div>
+    <div class="company"><?php echo $company_name; ?></div>
 	</div>
 <?php echo do_shortcode('[contact-form-7 id="151" title="Career"]'); ?>
 </div>
@@ -229,27 +180,44 @@ echo '</div>';
 
         
       </div>
+
     </div>
   </section>
-
-  <script type="text/javascript">
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+  $(document).on("click", "#accordionExample .card-header" , function() {
+   var active_tab=$(this).attr('currentTab');
    
-  	function request_job(job_id)
-	{    /* alert(job_id);
-    var job_title  = $('#job_hidden_info_'+job_id+' .jobtitle').text();
-     alert(job_title);*/
-     /*var job_title  = $('#job_hidden_info_'+job_id+' .jobtitle').text();
-     alert(job_title);
-     var job_location  = $('#job_hidden_info_'+job_id+' .joblocation').text();
-     var job_type  = $('#job_hidden_info_'+job_id+' .jobtype').text();
+   var job_title  = $('.job_hidden_info_'+active_tab+' .jobtitle').text();
+   var job_location  = $('.job_hidden_info_'+active_tab+' .joblocation').text();
+   var job_type  = $('.job_hidden_info_'+active_tab+' .jobtype').text();
+   var job_skills  = $('.job_hidden_info_'+active_tab+' .jobskills').text();
+   var company_name  = $('.job_hidden_info_'+active_tab+' .company').text();
+    $('input[name=jobtitle]').val(job_title);
+    $('input[name=joblocation]').val(job_location);
+    $('input[name=jobtype]').val(job_type);
+    $('input[name=jobskils]').val(job_skills);
+    $('input[name=jobcompany]').val(company_name);
+  });
 
-    
-    
-      $('#jobtitle').val(job_title);
-      $('#joblocation').val(job_location);
-      $('#jobtype').val(job_type);*/
-	
-	}
+ $('.job_title_search').keyup(function(){ 
+   var query=$(this).val();
+   var str = '&query=' + query + '&action=search_ajax_request';
 
-  </script>
+ $.ajax({
+     url: ajaxurl,
+     dataType: "json",
+     type: 'POST',
+     data: str,
+        success:function(data) {
+         $('div.job_searh_response').html(data.job_list);
+         },
+        error: function(errorThrown){
+            console.log(errorThrown);
+        }
+    });
+ });
+
+});
+</script>
 <?php get_footer(); ?>

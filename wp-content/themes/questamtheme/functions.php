@@ -309,3 +309,124 @@ function add_link_atts($atts) {
   return $atts;
 }
 add_filter( 'nav_menu_link_attributes', 'add_link_atts');
+
+/* handle ajax request  for search */
+function search_ajax_request() { 
+global $wpdb;
+$data=array(); 
+$search_query='';
+$query = $_POST['query'];
+if(!empty($query))
+{
+$search_query = "SELECT p.post_title, p.post_content, p.ID FROM wp_posts p JOIN wp_postmeta m1 ON p.ID = m1.post_id WHERE (p.post_title LIKE '%{$query}%' OR m1.meta_key = 'jobpost_location' and meta_value LIKE '%{$query}%' OR m1.meta_key = 'jobpost_skills' and meta_value LIKE '%{$query}%' OR m1.meta_key = 'jobpost_type' and meta_value LIKE '%{$query}%') AND p.post_status = 'publish' AND p.post_type = 'jobpost' GROUP BY p.ID";
+
+$search_query = $wpdb->get_results($search_query, ARRAY_A);
+$search_num_rows= $wpdb->num_rows;
+if($search_num_rows > 0)
+{
+foreach($search_query as $search)
+{
+ $job_id=$search['ID'];
+ $job_title=$search['post_title'];
+ $job_description=$search['post_content'];
+ $location=get_post_meta( $job_id, 'jobpost_location', true );
+ $type=get_post_meta( $job_id, 'jobpost_type', true );
+ $skills=get_post_meta( $job_id, 'jobpost_skills', true );
+ $rate=get_post_meta( $job_id, 'rate', true );
+ $company_name=get_post_meta( $job_id, 'company_name', true );
+
+$data['job_list'] .= '<div class="card">';
+$data['job_list'] .= '<div class="card-header" id="heading'.$job_id.'" currentTab="'.$job_id.'">';
+$data['job_list'] .= '<div class="btn btn-link btn-block text-left collapce-inner collapsed" type="button" data-toggle="collapse" data-target="#collapse'.$job_id.'" aria-expanded="true" aria-controls="collapse'.$job_id.'">';
+$data['job_list'] .= '<div class="row align-items-center">';
+$data['job_list'] .= '<div class="col-md-5">';
+$data['job_list'] .= '<div class="item">';
+$data['job_list'] .= '<h6 class="job-tittle">'.$job_title.'</h6>';
+ if(!empty($company_name)) {
+ $data['job_list'] .= '<p class="job-s mb-0">'.$company_name.'</p>';
+} 
+
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="col-md-2">';
+$data['job_list'] .= '<p>'.$location.'</p>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="col-md-5">';
+$data['job_list'] .= '<div class="row justify-content-between">';
+$data['job_list'] .= '<div class="col-auto">';
+$data['job_list'] .= '<p>'.$type.'</p>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="col-auto">';
+$data['job_list'] .= '<button type="submit" class="btn btn-outline-primary w-100">Apply Now</button>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div id="collapse'.$job_id.'" class="collapse" aria-labelledby="heading'.$job_id.'" data-parent="#accordionExample">';
+$data['job_list'] .= '<div class="card-body">';
+$data['job_list'] .= '<div class="row mt-3">';
+$data['job_list'] .= '<div class="col-md-6 pr-lg-5">';
+$data['job_list'] .= '<h6>Project Description</h6>';
+$data['job_list'] .= $job_description;
+$data['job_list'] .= '<div class="row mt-5">';
+$data['job_list'] .= '<div class="col-sm-3"><strong>Job ID:</strong></div>';
+$data['job_list'] .= '<div class="col-sm-9">1000111</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="row">';
+$data['job_list'] .= '<div class="col-sm-3"><strong>Job ID:</strong></div>';
+$data['job_list'] .= '<div class="col-sm-9">6 months with possible extension until Dec 2019</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="row">';
+$data['job_list'] .= '<div class="col-sm-3"><strong>Start Date:</strong></div>';
+$data['job_list'] .= '<div class="col-sm-9">ASAP</div>';
+$data['job_list'] .= '</div>';
+if(!empty($rate)) {
+$data['job_list'] .= '<div class="row">';
+$data['job_list'] .= '<div class="col-sm-3"><strong>Rate:</strong></div>';
+$data['job_list'] .= '<div class="col-sm-9">'.$rate.'</div>';
+$data['job_list'] .= '</div>';
+}
+ if(!empty($skills)) {
+$data['job_list'] .= '<div class="row">';
+$data['job_list'] .= '<div class="col-sm-3"><strong>Key Skills:</strong></div>';
+$data['job_list'] .= '<div class="col-sm-9">'.$skills.'</div>';
+$data['job_list'] .= '</div>';
+}
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="col-md-6">';
+$data['job_list'] .= '<div class="inner form-bg">';
+$data['job_list'] .= '<div class="form-top">';
+$data['job_list'] .= '<h6>Apply For Job</h6>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '<div class="form-wrapper">';
+$data['job_list'] .= '<div class="job_hidden_info_'.$job_id.' d-none">';
+$data['job_list'] .= '<div class="jobtitle">'.$job_title.'</div>';
+$data['job_list'] .= '<div class="joblocation">'.$location.'</div>';
+$data['job_list'] .= '<div class="jobtype">'.$type.'</div>';
+$data['job_list'] .= '<div class="jobskills">'.$skills.'</div>';
+$data['job_list'] .= '<div class="company">'.$company_name.'</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= do_shortcode('[contact-form-7 id="151" title="Career"]');
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+$data['job_list'] .= '</div>';
+
+}
+}
+else
+{
+   $data['job_list'] .= '<div class="col text-center">'. 'No job Found Please Try With an Alternate Word.' .'</div>'; 
+
+}
+echo json_encode($data);
+}
+die;
+}
+add_action( 'wp_ajax_nopriv_search_ajax_request', 'search_ajax_request' );
+add_action('wp_ajax_search_ajax_request', 'search_ajax_request'); 
