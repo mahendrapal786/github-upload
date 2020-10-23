@@ -21,11 +21,21 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i> <?php echo $texts['DASHBOARD']; ?>
                 </a>
             </li>
+
+         <?php
+            if($_SESSION['user']['type'] == "receptionist"){ ?>
+                 <li>
+                    <a href=""><i class="fa fa-home"></i>&nbsp;Rooms List</a>
+                 </li>
+
+            <?php } ?>
+
             <li class="dropdown">
                 <a data-target="#module-menu" data-toggle="collapse" href="#"><i class="fas fa-fw fa-th"></i> <?php echo $texts['MODULES']; ?> <i class="fas fa-fw fa-angle-down"></i></a>
                 <ul class="<?php if(array_key_exists($dirname, $indexes)) echo "in"; else echo "collapse"; ?>" role="menu" id="module-menu">
                     <?php
-                    foreach($modules as $module){
+
+                       foreach($modules as $module){
 
                         $title = $module->getTitle();
                         $name = $module->getName();

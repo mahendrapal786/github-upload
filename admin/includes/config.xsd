@@ -10,6 +10,7 @@
 						<xs:enumeration value="manager" />
 						<xs:enumeration value="editor" />
 						<xs:enumeration value="registered" />
+						<xs:enumeration value="receptionist" />
 						<xs:enumeration value="hotel" />
 					</xs:restriction>
 				</xs:simpleType>
@@ -168,7 +169,7 @@
 				<xs:simpleType>
                     <xs:annotation>
                         <xs:documentation>
-                            administrator,manager,editor,registered,hotel
+                            administrator,manager,editor,registered,receptionist,hotel
                         </xs:documentation>
                     </xs:annotation>
 					<xs:restriction base="xs:string">

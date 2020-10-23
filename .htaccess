@@ -64,7 +64,7 @@ AddDefaultCharset UTF-8
     RewriteCond %{QUERY_STRING} (GLOBALS|REQUEST)(=|\[|%) [NC]
     RewriteRule .* - [E=BadQueryString,F]
 
-    RewriteRule ^ - [E=BASE:/hotelbook/] [L]
+    RewriteRule ^ - [E=BASE:/roombook_ci/] [L]
     
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteRule ^(.*)/$ /$1 [L,R=301]
