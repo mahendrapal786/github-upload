@@ -108,8 +108,48 @@ require_once("includes/fn_module.php"); ?>
                                     <?php
                                 }
                             }
+
                         }
                     } ?>
+                    <div class="dashboard-entry col-lg-3 col-md-4 col-sm-6">
+                                        <div class="panel panel-primary">
+                                            <div class="panel-heading">
+                                                <div class="row">
+                                                    <div class="col-xs-3">
+                                                        <div class="huge"><i class="fas fa-fw fa-<?php echo $module->getIcon(); ?>"></i></div>
+                                                    </div>
+                                                    <div class="col-xs-9 text-right">
+                                                        <div class="huge">2</div>
+                                                        <h3 class="mt0">Room Type</h3>
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       <?php $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; 
+                                        function removeFilename($actual_link)
+                                            {
+                                                $file_info = pathinfo($actual_link);
+                                                return isset($file_info['extension'])
+                                                    ? str_replace($file_info['filename'] . "." . $file_info['extension'], "", $actual_link)
+                                                    : $actual_link;
+                                            }
+                                       ?>
+                                          <a href="<?php echo removeFilename($actual_link); ?>modules/room_type">
+                                                <div class="panel-footer">
+                                                    <span class="pull-left">Show</span>
+                                                    <span class="pull-right"><i class="fas fa-fw fa-chevron-circle-right"></i></span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                            <a href="<?php echo $dir; ?>/index.php?view=form&id=0">
+                                                <div class="panel-footer">
+                                                    <span class="pull-left">Add</span>
+                                                    <span class="pull-right"><i class="fas fa-fw fa-plus-circle"></i></span>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
                 </div>
             </div>
         </div>
