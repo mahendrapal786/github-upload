@@ -22,7 +22,8 @@ $query.= " WHERE specialties_en='".trim($_POST['specialties'])."'";
  }*/
  if(isset($_POST['submit']))
  {
-  $room_type=$_POST['room_type'];
+ $sql='';
+ $room_type=$_POST['room_type'];
  $price=$_POST['price'];
 
  $price_arr=explode("-",$price);
@@ -30,16 +31,18 @@ $query.= " WHERE specialties_en='".trim($_POST['specialties'])."'";
  $price_start=$price_arr[0];
  $price_end=$price_arr[1]; 
   
- if(isset($room_type) && $room_type==0)
-  {
-  $sql = "SELECT pm_room.title,pm_room.price,pm_room_type.name FROM pm_room INNER JOIN pm_room_meta  ON pm_room.id=pm_room_meta.room_id INNER JOIN pm_room_type  ON pm_room_type.id = pm_room_meta.room_type_id";
-  }
-  else if(isset($room_type) && $room_type!=0)
-  {
-    $sql = "SELECT pm_room.title,pm_room.price,pm_room_type.name FROM pm_room INNER JOIN pm_room_meta  ON pm_room.id=pm_room_meta.room_id INNER JOIN pm_room_type  ON pm_room_type.id = pm_room_meta.room_type_id WHERE pm_room_type.id='".$room_type."'";
-  }
+ $sql .= "SELECT pm_room.title,pm_room.price,pm_room_type.name FROM pm_room INNER JOIN pm_room_meta  ON pm_room.id=pm_room_meta.room_id INNER JOIN pm_room_type  ON pm_room_type.id = pm_room_meta.room_type_id";
 
-
+ if(isset($room_type) && $room_type!=0)
+  {
+    $sql .= " WHERE pm_room_type.id='".$room_type."'";
+  }
+ if(isset($price_start) && isset($price_end))
+ {
+  $sql .= " WHERE pm_room.price BETWEEN '".$price_start."' AND '".$price_end."'";
+ } 
+ echo $sql;
+die;
   $room_lists=$conn->query($sql);
   if(!empty($room_lists)) :
 
