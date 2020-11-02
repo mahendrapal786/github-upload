@@ -214,7 +214,12 @@ $csrf_token = get_token('list'); ?>
 								<div class="pull-left text-right">
 									&nbsp;&nbsp;
 									<?php
-									if(in_array('add', $permissions) || in_array('all', $permissions)){ ?>
+                                    if($_SESSION['user']['type']=='manager'){ ?>
+                                        <a href="index.php?view=bookingform&id=0" class="btn btn-primary mt15 mb15">
+                                            <i class="fas fa-fw fa-plus-circle"></i> <?php echo $texts['NEW']; ?>
+                                        </a>
+                                    <?php }
+									 else if(in_array('add', $permissions) || in_array('all', $permissions)){ ?>
 										<a href="index.php?view=form&id=0" class="btn btn-primary mt15 mb15">
 											<i class="fas fa-fw fa-plus-circle"></i> <?php echo $texts['NEW']; ?>
 										</a>

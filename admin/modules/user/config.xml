@@ -27,7 +27,6 @@
                 <option value="manager">manager</option>
                 <option value="editor">editor</option>
                 <option value="registered">registered</option>
-                <option value="receptionist">receptionist</option>
             </options>
         </field>
 		<field multi="0" label="[ADDRESS]" name="address" type="textarea" editor="0" required="0" unique="0" validation="none"/>
@@ -44,6 +43,5 @@
         <user type="administrator" permissions="all"/>
         <user type="manager" permissions="no_access"/>
         <user type="editor" permissions="no_access"/>
-        <user type="receptionist" permissions="no_access"/>
     </roles>
 </module>

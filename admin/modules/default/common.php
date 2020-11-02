@@ -101,6 +101,10 @@ if(isset($_GET['view'])){
     if($view == 'form'){
         if(is_file('form.php')) require_once('form.php'); else require_once(SYSBASE.ADMIN_FOLDER.'/modules/default/form.php');
     }
+    if($view == 'bookingform'){
+        if(is_file('addbooking.php')) require_once('addbooking.php'); else require_once(SYSBASE.ADMIN_FOLDER.'/modules/default/addbooking.php');
+    }
+    
 }else{
     header('Location: '.DOCBASE.'admin');
     exit();

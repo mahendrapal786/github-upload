@@ -79,7 +79,7 @@ $csrf_token = get_token('login'); ?>
             <div class="col-sm-3 col-md-4"></div>
             <div class="col-sm-6 col-md-4" id="loginWrapper">
                 <div id="logo">
-                    <img src="images/logo-admin.png">
+                    <img src="images/logo-admin.png" style="width:50%">
                 </div>
                 <div id="login">
                     <div class="alert-container">

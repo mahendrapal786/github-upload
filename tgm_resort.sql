@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
+-- version 4.9.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 23, 2020 at 01:25 PM
--- Server version: 5.7.14
--- PHP Version: 7.0.10
+-- Host: localhost:3306
+-- Generation Time: Nov 02, 2020 at 04:42 AM
+-- Server version: 5.6.49-cll-lve
+-- PHP Version: 7.3.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -215,7 +217,21 @@ INSERT INTO `pm_booking` (`id`, `add_date`, `edit_date`, `from_date`, `to_date`,
 (3, 1601637615, 1601637695, 1601596800, 1601683200, 1, 2, 1, NULL, 0, NULL, 3250.89, 6.11, 3257, 0, 0, 3257, 1, 'LAVANSH', 'RATHORE', 'thegrandmachal@gmail.com', 'GRAND MACHAL RESORTS & CLUBS PVT.LTD', 'N/2 SANJHI CHHAT MAHESH NAGAR', '452002', 'INDORE', '9630444445', '9630444445', 'India', '', 4, NULL, NULL, 'arrival'),
 (4, 1601638855, 1601639711, 1601683200, 1601769600, 1, 2, 1, NULL, 0, NULL, 3262.5, 7.5, 3270, 0, 0, 3270, 1, 'LAVANSH', 'RATHORE', 'thegrandmachal@gmail.com', 'GRAND MACHAL RESORTS & CLUBS PVT.LTD', 'N/2 SANJHI CHHAT MAHESH NAGAR', '452002', 'INDORE', '9630444445', '9630444445', 'India', '', 4, NULL, NULL, 'arrival'),
 (5, 1601978499, 1601978645, 1602028800, 1602115200, 1, 0, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, 0, 1, 'LAVANSH', 'RATHORE', 'thegrandmachal@gmail.com', 'Dr. Moon Jain', '621 , Vardhman Medicose Narendra Tiwari Marg, Usha Nagar Extension', '452009', 'Indore', '9630444445', '9630444445', 'India', '', 4, NULL, NULL, ''),
-(6, 1603366047, 1603366047, 1603497600, 1603670400, 2, 2, 2, NULL, 0, NULL, 228.95, 0, 254, 200, 25, 229, NULL, 'raj', 'varma', 'raj@gmail.com', 'test', 'indore', '452001', 'indore', '7894561236', '7894561236', 'India', 'hi this is raj booking', 4, NULL, NULL, 'arrival');
+(6, 1603250069, 1603250069, 1603238400, 1603324800, 1, 1, 0, NULL, 0, NULL, 0, 0, 0, 1, 0, 0, NULL, 'Test', 'Test', 'Test@mailinator.com', 'Test', '123', '452001', 'Indore', '72536363673', '', 'Algeria', 'Tetys', 4, NULL, NULL, 'arrival'),
+(7, 1603250135, 1603250135, 1603238400, 1603324800, 1, 1, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, 0, 1, 'LAVANSH', 'RATHORE', 'thegrandmachal@gmail.com', 'GRAND MACHAL RESORTS & CLUBS PVT.LTD', 'N/2 SANJHI CHHAT MAHESH NAGAR', '452002', 'INDORE', '9630444445', '9630444445', 'India', '', 4, NULL, NULL, 'arrival'),
+(8, 1603250248, 1603250248, 1603238400, 1603324800, 1, 5, 0, NULL, 0, NULL, 0, 0, 0, 0, 0, 0, 2, 'jassi ', 'singh', 'jasbeerjassi85@gmail.com', 'obabuji', '3073 nagar', '452009', 'Indore', '9752382628', '9752382628', 'India', '', 4, NULL, NULL, ''),
+(10, 1604128187, 1604128463, 1604102400, 1604188800, 1, 1, 0, NULL, 0, NULL, 200, 0, 200, 0, 200, 0, NULL, 'mahendra', 'pal', 'palismahendra@gmail.com', '', 'palda naka indore', '452001', 'indore', '7771917836', '7771917836', 'India', '', 4, NULL, 1604128187, 'arrival'),
+(11, 1604128680, 1604128902, 1604448000, 1604534400, 1, 1, 0, NULL, 0, NULL, 300, 0, 300, 0, 300, 0, NULL, 'tanishq', 'pal', 'tanmay@gmail.com', 'obabuji', 'GPO', '452001', 'indore', '7894563215', '7894561236', 'India', '', 4, NULL, 1604128680, 'arrival'),
+(12, 1604129535, NULL, 1604341800, 1604428200, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, 3500, 0, 100, 3500, NULL, NULL, NULL, 'kartiky@gmail.com', NULL, 'indore', NULL, 'INDORE', NULL, '9876543215', 'India', NULL, NULL, NULL, 1604129535, 'arrival'),
+(13, 1604134414, NULL, 0, 0, 0, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, '', NULL, '', NULL, '', NULL, '', 'India', NULL, NULL, NULL, 1604134414, 'arrival'),
+(14, 1604134741, NULL, 1604082600, 1604169000, 1, 2, 1, NULL, NULL, NULL, NULL, NULL, 3500, 0, 250, 3500, NULL, NULL, NULL, '', NULL, '', NULL, '', NULL, '', 'India', NULL, NULL, NULL, 1604134741, 'arrival'),
+(15, 1604247965, NULL, 0, 0, 0, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, '', NULL, '', NULL, '', NULL, '', 'India', NULL, NULL, NULL, 1604247965, 'arrival'),
+(16, 1604285625, NULL, 0, 0, 0, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 0, 0, NULL, NULL, NULL, '', NULL, '', NULL, '', NULL, '', 'India', NULL, NULL, NULL, 1604285625, 'arrival'),
+(17, 1604296151, NULL, 1604341800, 1604428200, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, 3000, 0, 200, 3000, NULL, NULL, NULL, 'harsh@gmail.com', NULL, 'vijay nagar', NULL, 'indore', NULL, '7894561236', 'India', NULL, NULL, NULL, 1604296151, 'arrival'),
+(18, 1604298410, NULL, 1604341800, 1604428200, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, 3000, 0, 600, 3000, NULL, 'mayank', 'sharma', 'mayank@gmail.com', NULL, 'indore', NULL, 'indore', '7894561236', '7894561236', 'India', NULL, NULL, NULL, 1604298410, 'arrival'),
+(19, 1604309356, NULL, 1604428200, 1604514600, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, 3000, 0, 800, 3000, NULL, 'shivraj', 'sharma', 'shivraj@gmail.com', NULL, 'indore', NULL, 'indore', '7894561236', '7894561236', 'India', NULL, NULL, NULL, 1604309356, 'arrival'),
+(20, 1604311958, NULL, 1604514600, 1604601000, 1, 1, 0, NULL, NULL, NULL, NULL, NULL, 3000, 0, 400, 3000, NULL, 'Chetan', 'Yadav', 'chetan@gmail.com', NULL, 'shri ram nagar', NULL, 'indore', '7894563215', '7894563215', 'India', NULL, NULL, NULL, 1604311958, 'arrival'),
+(21, 1604312001, NULL, 1605810600, 1605897000, 0, 1, 0, NULL, NULL, NULL, NULL, NULL, 0, 0, 600, 0, NULL, 'Chetan', 'Yadav', 'chetan@gmail.com', NULL, 'shri ram nagar', NULL, 'indore', '7894563215', '7894563215', 'India', NULL, NULL, NULL, 1604312001, 'arrival');
 
 -- --------------------------------------------------------
 
@@ -259,7 +275,18 @@ CREATE TABLE `pm_booking_payment` (
 
 INSERT INTO `pm_booking_payment` (`id`, `id_booking`, `descr`, `method`, `amount`, `date`, `trans`) VALUES
 (1, 2, '', 'cash', 100, 1600732800, ''),
-(2, 6, 'payment by credit card', 'card', 250, 1603152000, '');
+(3, 10, '', 'cash', 200, 1604102400, ''),
+(4, 11, '', 'cash', 300, 1604102400, ''),
+(5, 12, NULL, 'cash', 100, 1604129535, NULL),
+(6, 13, NULL, 'cash', 0, 1604134414, NULL),
+(7, 14, NULL, 'cash', 250, 1604134741, NULL),
+(8, 15, NULL, 'cash', 0, 1604247965, NULL),
+(9, 16, NULL, 'cash', 0, 1604285625, NULL),
+(10, 17, NULL, 'cash', 200, 1604296151, NULL),
+(12, 18, NULL, 'cash', 600, 1604298410, NULL),
+(13, 19, NULL, 'cash', 800, 1604309356, NULL),
+(14, 20, NULL, 'cash', 400, 1604311958, NULL),
+(15, 21, NULL, 'cash', 600, 1604312001, NULL);
 
 -- --------------------------------------------------------
 
@@ -288,7 +315,21 @@ INSERT INTO `pm_booking_room` (`id`, `id_booking`, `id_room`, `title`, `num`, `c
 (1, 2, 1, 'Deluxe Double Bedroom', '1', 1, 1, 0, NULL, 0),
 (2, 3, 1, 'Urban Room', '', 1, 2, 3200, 3200, 0),
 (3, 4, 1, 'Urban Room', '', 1, 2, 3200, 3200, 0),
-(4, 6, 2, 'Urban cottages', '1', 2, 2, 204, NULL, 14);
+(4, 6, 2, 'Urban cottages', '', 0, 1, 0, NULL, 0),
+(5, 7, 2, 'Urban cottages', '', 0, 1, 0, NULL, 0),
+(6, 8, 2, 'Urban cottages', '', 0, 5, 0, NULL, 0),
+(8, 10, 1, 'gfgdfgdfg', '1', 0, 1, 200, 0, 0),
+(9, 11, 2, 'gfdgdfgdfgf', '1', 0, 1, 300, 0, 0),
+(10, 12, 2, NULL, '1', 0, 1, 100, 0, 0),
+(11, 13, 2, NULL, '1', 0, 1, 0, 0, 0),
+(12, 14, 2, NULL, '1', 1, 2, 250, 0, 0),
+(13, 15, 2, NULL, '1', 0, 1, 0, 0, 0),
+(14, 16, 1, NULL, '1', 0, 1, 0, 0, 0),
+(15, 17, 1, NULL, '1', 0, 1, 200, 0, 0),
+(17, 18, 1, NULL, '1', 0, 1, 600, 0, 0),
+(18, 19, 1, NULL, '1', 0, 1, 800, 0, 0),
+(19, 20, 1, NULL, '1', 0, 1, 400, 0, 0),
+(20, 21, 1, NULL, '1', 0, 1, 600, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -317,8 +358,7 @@ INSERT INTO `pm_booking_service` (`id`, `id_booking`, `id_service`, `title`, `qt
 (3, 4, 1, 'Rent of towel (kit)', 1, 7, 6.25, 12),
 (4, 4, 2, 'Housework', 1, 50, 44.64, 12),
 (5, 4, 3, 'Heating', 1, 8, 7.14, 12),
-(6, 4, 4, 'Pet', 1, 5, 4.46, 12),
-(7, 6, NULL, 'Pet', 1, 50, NULL, 0);
+(6, 4, 4, 'Pet', 1, 5, 4.46, 12);
 
 -- --------------------------------------------------------
 
@@ -698,9 +738,9 @@ INSERT INTO `pm_email_content` (`id`, `lang`, `name`, `subject`, `content`) VALU
 (3, 1, 'BOOKING_CONFIRMATION', 'Confirmation de réservation', '<p><b>Adresse de facturation</b><br />\r\n{firstname} {lastname}<br />\r\n{address}<br />\r\n{postcode} {city}<br />\r\nSociété : {company}<br />\r\nTéléphone : {phone}<br />\r\nMobile : {mobile}<br />\r\nEmail : {email}</p>\r\n\r\n<p><strong>Détails de la réservation</strong><br />\r\nArrivée : <b>{Check_in}</b><br />\r\nDépart : <b>{Check_out}</b><br />\r\n<b>{num_nights}</b> nuit(s)<br />\r\n<b>{num_guests}</b> personne(s) - Adulte(s) : <b>{num_adults}</b> / Enfant(s) : <b>{num_children}</b></p>\r\n\r\n<p><b>Chambres</b></p>\r\n\r\n<p>{rooms}</p>\r\n\r\n<p><b>Services supplémentaires</b></p>\r\n\r\n<p>{extra_services}</p>\r\n\r\n<p><b>Activités</b></p>\r\n\r\n<p>{activities}</p>\r\n\r\n<p>Taxe de séjour : {tourist_tax}<br />\r\nRéduction: {discount}<br />\r\n{taxes}<br />\r\nTotal : <strong>{total} TTC</strong></p>\r\n\r\n<p>Acompte : <strong>{down_payment} TTC</strong></p>\r\n\r\n<p><b>Commentaires</b><br />\r\n{comments}</p>\r\n\r\n<p>{payment_notice}</p>\r\n'),
 (3, 2, 'BOOKING_CONFIRMATION', 'Booking confirmation', '<p><b>Billing address</b><br />\r\n{firstname} {lastname}<br />\r\n{address}<br />\r\n{postcode} {city}<br />\r\nCompany: {company}<br />\r\nPhone: {phone}<br />\r\nMobile: {mobile}<br />\r\nEmail: {email}</p>\r\n\r\n<p><strong>Booking details</strong><br />\r\nCheck in <b>{Check_in}</b><br />\r\nCheck out <b>{Check_out}</b><br />\r\n<b>{num_nights}</b> nights<br />\r\n<b>{num_guests}</b> persons - Adults: <b>{num_adults}</b> / Children: <b>{num_children}</b></p>\r\n\r\n<p><strong>Rooms</strong></p>\r\n\r\n<p>{rooms}</p>\r\n\r\n<p><b>Extra services</b></p>\r\n\r\n<p>{extra_services}</p>\r\n\r\n<p><b>Activities</b></p>\r\n\r\n<p>{activities}</p>\r\n\r\n<p>Tourist tax: {tourist_tax}<br />\r\nDiscount: {discount}<br />\r\n{taxes}<br />\r\nTotal: <strong>{total} incl. VAT</strong></p>\r\n\r\n<p>Down payment: <strong>{down_payment} incl. VAT</strong></p>\r\n\r\n<p><b>Comments</b><br />\r\n{comments}</p>\r\n\r\n<p>{payment_notice}</p>\r\n'),
 (3, 3, 'BOOKING_CONFIRMATION', 'Booking confirmation', '<p><b>Billing address</b><br />\r\n{firstname} {lastname}<br />\r\n{address}<br />\r\n{postcode} {city}<br />\r\nCompany: {company}<br />\r\nPhone: {phone}<br />\r\nMobile: {mobile}<br />\r\nEmail: {email}</p>\r\n\r\n<p><strong>Booking details</strong><br />\r\nCheck in <b>{Check_in}</b><br />\r\nCheck out <b>{Check_out}</b><br />\r\n<b>{num_nights}</b> nights<br />\r\n<b>{num_guests}</b> persons - Adults: <b>{num_adults}</b> / Children: <b>{num_children}</b></p>\r\n\r\n<p><strong>Rooms</strong></p>\r\n\r\n<p>{rooms}</p>\r\n\r\n<p><b>Extra services</b></p>\r\n\r\n<p>{extra_services}</p>\r\n\r\n<p><b>Activities</b></p>\r\n\r\n<p>{activities}</p>\r\n\r\n<p>Tourist tax: {tourist_tax}<br />\r\nDiscount: {discount}<br />\r\n{taxes}<br />\r\nTotal: <strong>{total} incl. VAT</strong></p>\r\n\r\n<p>Down payment: <strong>{down_payment} incl. VAT</strong></p>\r\n\r\n<p><b>Comments</b><br />\r\n{comments}</p>\r\n\r\n<p>{payment_notice}</p>\r\n'),
-(4, 1, 'ACCOUNT_CONFIRMATION', 'Confirmation du compte', '<p>Bonjour,<br />\r\nVous avez cr&eacute;&eacute; un nouveau compte.<br />\r\nCliquez sur le lien ci-dessous pour valider votre compte:<br />\r\n<a href="{link}">Valider mon compte</a></p>\r\n'),
-(4, 2, 'ACCOUNT_CONFIRMATION', 'Validate your account', '<p>Hi,<br />\r\nYou created a new account.<br />\r\nClick on the link bellow to validate your account:<br />\r\n<a href="{link}">Validate my new account</a></p>\r\n'),
-(4, 3, 'ACCOUNT_CONFIRMATION', 'Validate your account', '<p>Hi,<br />\r\nYou created a new account.<br />\r\nClick on the link bellow to validate your account:<br />\r\n<a href="{link}">Validate my new account</a></p>\r\n');
+(4, 1, 'ACCOUNT_CONFIRMATION', 'Confirmation du compte', '<p>Bonjour,<br />\r\nVous avez cr&eacute;&eacute; un nouveau compte.<br />\r\nCliquez sur le lien ci-dessous pour valider votre compte:<br />\r\n<a href=\"{link}\">Valider mon compte</a></p>\r\n'),
+(4, 2, 'ACCOUNT_CONFIRMATION', 'Validate your account', '<p>Hi,<br />\r\nYou created a new account.<br />\r\nClick on the link bellow to validate your account:<br />\r\n<a href=\"{link}\">Validate my new account</a></p>\r\n'),
+(4, 3, 'ACCOUNT_CONFIRMATION', 'Validate your account', '<p>Hi,<br />\r\nYou created a new account.<br />\r\nClick on the link bellow to validate your account:<br />\r\n<a href=\"{link}\">Validate my new account</a></p>\r\n');
 
 -- --------------------------------------------------------
 
@@ -861,6 +901,44 @@ INSERT INTO `pm_facility_file` (`id`, `lang`, `id_item`, `home`, `checked`, `ran
 (37, 2, 33, 0, 1, 33, 'restaurant.png', '', 'image'),
 (38, 2, 33, 0, 1, 33, 'room-service.png', '', 'image'),
 (39, 2, 33, 0, 1, 33, 'cloakroom.png', '', 'image');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_guests`
+--
+
+CREATE TABLE `pm_guests` (
+  `id` int(11) NOT NULL,
+  `fullname` varchar(100) DEFAULT NULL,
+  `lastname` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `mobile` varchar(50) DEFAULT NULL,
+  `father_name` varchar(50) DEFAULT NULL,
+  `address` varchar(255) DEFAULT NULL,
+  `country` varchar(100) DEFAULT NULL,
+  `nationality` varchar(50) DEFAULT NULL,
+  `state` varchar(50) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `gender` varchar(30) DEFAULT NULL,
+  `age` int(11) DEFAULT NULL,
+  `created` datetime DEFAULT NULL,
+  `status` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pm_guests`
+--
+
+INSERT INTO `pm_guests` (`id`, `fullname`, `lastname`, `email`, `mobile`, `father_name`, `address`, `country`, `nationality`, `state`, `city`, `gender`, `age`, `created`, `status`) VALUES
+(2, 'mahendra', '', 'palismahendra@gmail.com', '7771917836', 'munshilal', 'palda naka indore', '0', '102', 'mp', 'indore', 'Male', 32, '2020-10-31 12:39:47', 1),
+(3, 'tanishqa pal', '', 'tanmay@gmail.com', '7894561236', 'mahendra pal', 'GPO', '0', '102', 'madhya pradesh', 'indore', 'Female', 25, '2020-10-31 12:48:00', 1),
+(4, 'kartikey pal', '', 'kartiky@gmail.com', '9876543215', 'arun pal', 'indore', '0', '1', 'MADHYA PRADESH', 'INDORE', 'Male', 24, '2020-10-31 13:02:15', 1),
+(8, 'harsh', '', 'harsh@gmail.com', '7894561236', 'raja', 'vijay nagar', '0', '102', 'mp', 'indore', 'Male', 34, '2020-11-02 11:19:11', 1),
+(9, 'aasif', 'ali', 'aasif@gmail.com', '7894561236', 'test', 'indore', '0', '102', 'mp', 'indore', 'Male', 22, '2020-11-02 11:52:03', 1),
+(10, 'mayank', 'sharma', 'mayank@gmail.com', '7894561236', 'mohit', 'indore', '0', '102', 'madhya pradesh', 'indore', 'Male', 23, '2020-11-02 11:56:50', 1),
+(11, 'shivraj', 'sharma', 'shivraj@gmail.com', '7894561236', 'shiv', 'indore', '0', '102', 'madhya pradesh', 'indore', 'Male', 32, '2020-11-02 14:59:16', 1),
+(12, 'Chetan', 'Yadav', 'chetan@gmail.com', '7894563215', 'test', 'shri ram nagar', 'India', '102', 'madhya pradesh', 'indore', 'Male', 30, '2020-11-02 15:42:38', 1);
 
 -- --------------------------------------------------------
 
@@ -1119,7 +1197,7 @@ CREATE TABLE `pm_page` (
 
 INSERT INTO `pm_page` (`id`, `lang`, `name`, `title`, `subtitle`, `title_tag`, `alias`, `descr`, `robots`, `keywords`, `intro`, `text`, `id_parent`, `page_model`, `article_model`, `home`, `checked`, `rank`, `add_date`, `edit_date`, `comment`, `rating`, `system`, `show_langs`, `hide_langs`) VALUES
 (1, 1, 'Accueil', 'Lorem ipsum dolor sit amet', 'Consectetur adipiscing elit', 'Accueil', '', '', 'index,follow', '', '', '', NULL, 'home', '', 1, 1, 1, 1598432108, 1598434919, 0, 0, 0, '', ''),
-(1, 2, 'Home', 'The Grand Machal, Luxury Resort', '', 'RESORTS & CLUBS ALL ADVENTURES ACTIVITIES', '', '', 'index,follow', '', '', '<blockquote class="text-center">\r\n<p>wesome yksum dolor sit ametco elit, sed do eiusmod tempor incididunt et md do eiusmoeiusmod tempor inte emamnsecacing eiusmoeiusmod</p>\r\n</blockquote>\r\n\r\n<p class="text-muted" style="text-align: center;">- George A. Moore -</p>\r\n', NULL, 'home', '', 1, 1, 1, 1598432108, 1598434919, 0, 0, 0, '', ''),
+(1, 2, 'Home', 'The Grand Machal, Luxury Resort', '', 'RESORTS & CLUBS ALL ADVENTURES ACTIVITIES', '', '', 'index,follow', '', '', '<blockquote class=\"text-center\">\r\n<p>wesome yksum dolor sit ametco elit, sed do eiusmod tempor incididunt et md do eiusmoeiusmod tempor inte emamnsecacing eiusmoeiusmod</p>\r\n</blockquote>\r\n\r\n<p class=\"text-muted\" style=\"text-align: center;\">- George A. Moore -</p>\r\n', NULL, 'home', '', 1, 1, 1, 1598432108, 1598434919, 0, 0, 0, '', ''),
 (1, 3, 'ترحيب', 'هو سقطت الساحلية ذات, أن.', 'غير بمعارضة وهولندا، الإقتصادية قد, فقد الفرنسي المعاهدات قد من.', 'ترحيب', '', '', 'index,follow', '', '', '', NULL, 'home', '', 1, 1, 1, 1598432108, 1598434919, 0, 0, 0, '', ''),
 (2, 1, 'Contact', 'Contact', '', 'Contact', 'contact', '', 'index,follow', '', '', '', NULL, 'contact', '', 0, 1, 9, 1598432108, 1598432108, 0, 0, 0, NULL, NULL),
 (2, 2, 'Contact', 'Contact', '', 'Contact', 'contact', '', 'index,follow', '', '', '', NULL, 'contact', '', 0, 1, 9, 1598432108, 1598432108, 0, 0, 0, NULL, NULL),
@@ -1257,11 +1335,10 @@ CREATE TABLE `pm_room` (
 --
 
 INSERT INTO `pm_room` (`id`, `lang`, `max_children`, `max_adults`, `max_people`, `min_people`, `title`, `subtitle`, `alias`, `descr`, `facilities`, `stock`, `price`, `home`, `checked`, `rank`, `start_lock`, `end_lock`) VALUES
-(1, 2, 2, 2, 3, 2, 'Urban Room', 'Breakfast included', 'beds-and-beddings-maximum-occupancy-2-1-king-size-bed-mattress-available-as-per-availability', '<p>Room size: 550 square feet (approx.) • Air-conditioned • Safe Wardrobe with lock • Telephone • 48” LCD TV • Study Table With 2 chairs • Shower Cubical • 2 Bottled Water, Complimentary per day • Complimentary Tea/Coffee Maker • Mini Bar Fridge • Hot water Resort Services & Amenities • Complimentary Entry band of park which includes lot of activities(contact reception for more information) • Room Service • Housekeeping service daily • Newspaper Delivered To Room On Request • Wakeup Calls</p>\r\n', '1,5,11,13,17,18,21,23,24,25,27,28,29,31,32', 100, 3000, 1, 1, 1, NULL, NULL),
+(1, 2, 2, 2, 3, 2, 'Urban Room', 'Breakfast included', 'beds-and-beddings-maximum-occupancy-2-1-king-size-bed-mattress-available-as-per-availability', '<p>Room size: 550 square feet (approx.) • Air-conditioned • Safe Wardrobe with lock • Telephone • 48” LCD TV • Study Table With 2 chairs • Shower Cubical • 2 Bottled Water, Complimentary per day • Complimentary Tea/Coffee Maker • Mini Bar Fridge • Hot water Resort Services & Amenities • Complimentary Entry band of park which includes lot of activities(contact reception for more information) • Room Service • Housekeeping service daily • Newspaper Delivered To Room On Request • Wakeup Calls</p>\r\n', '1,5,11,13,17,18,21,23,24,25,27,28,29,31,32', 8, 3000, 1, 1, 1, NULL, NULL),
 (2, 2, 2, 2, 4, 1, 'Urban cottages', 'Urban cottages', 'room-amenities-beds-and-beddings-maximum-occupancy-2-1-1-king-size-bed-mattress-available-as-per-ava', '<p>Room Features • Room size: 650 square feet (approx.) • Standing balcony • Specious living area • Air-conditioned • Safe Wardrobe with lock • Telephone • 48” LCD TV • Study Table With 2 chairs • Shower Cubical • 2 Bottled Water, Complimentary per day • Complimentary Tea/Coffee Maker • Mini Bar Fridge • Hot water Resort Services & Amenities • Complimentary Entry band of park which includes lot of activities(contact reception for more information) • Room Service • Housekeeping service daily • Newspaper Delivered To Room On Request • Wakeup Calls</p>\r\n', '1,2,5,39,35,11,13,36,17,18,21,37,38,23,24,25,26,27,28,32', 100, 3500, 1, 1, 1, NULL, NULL),
-(3, 3, 4, 5, 5, 1, 'Royal suite', 'Pool & Jacuzzi Suite', 'royal-suite', '', '1,2,5,39,35,11,13,36,17,18,21,37,38,23,24,25,27,28,32', 100, 410, 1, 1, 3, NULL, NULL),
-(4, 2, 2, 2, 4, 2, 'Luxury Room', 'Luxury Room Subtitiel', 'luxury-room', '<p>this is Luxury Room available for couple</p>\r\n', '', 1, 500, 1, 1, 4, NULL, NULL),
-(5, 2, 4, 4, 10, 8, 'Top Floor Room', 'Top', 'top-floor-room', '<p>Top Floor Room Avalible</p>\r\n', '1,2,3,4,5,39,6,7,8,9,34,35,10,11,12,13,33,14,15,36,16,17,18,19,20,21,22,37,38,23,24,25,26,27,28,29,30,31,32', 1, 2000, 1, 1, 5, NULL, NULL);
+(3, 3, 4, 5, 5, 1, 'Royal suite', 'Pool & Jacuzzi Suite', 'royal-suite', '', '1,2,5,39,35,11,13,36,17,18,21,37,38,23,24,25,27,28,32', 1, 410, 1, 1, 3, NULL, NULL),
+(4, 2, 2, 2, 4, 1, 'Urban Hall', 'test', 'urbantest', '<p>test</p>\r\n', '', 1, 4500, 0, 1, 4, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1316,9 +1393,7 @@ CREATE TABLE `pm_room_file` (
 INSERT INTO `pm_room_file` (`id`, `lang`, `id_item`, `home`, `checked`, `rank`, `file`, `label`, `type`) VALUES
 (1, 2, 1, 0, 1, 1, 'deluxe-double-room.jpg', '', 'image'),
 (2, 2, 2, 0, 1, 2, '6515452555-27726c278e-o.jpg', '', 'image'),
-(3, 3, 3, 0, 1, 3, '6515451125-2fd51bd7c5-o.jpg', '', 'image'),
-(4, 2, 4, NULL, 1, 4, 'deluxe-double-room.jpg', '', 'image'),
-(5, 2, 5, NULL, 1, 5, 'deluxe-double-room.jpg', NULL, 'image');
+(3, 3, 3, 0, 1, 3, '6515451125-2fd51bd7c5-o.jpg', '', 'image');
 
 -- --------------------------------------------------------
 
@@ -1334,6 +1409,48 @@ CREATE TABLE `pm_room_lock` (
   `add_date` int(11) DEFAULT NULL,
   `sessid` varchar(50) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_room_meta`
+--
+
+CREATE TABLE `pm_room_meta` (
+  `metaid` int(11) NOT NULL,
+  `room_id` int(11) NOT NULL,
+  `room_type` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pm_room_meta`
+--
+
+INSERT INTO `pm_room_meta` (`metaid`, `room_id`, `room_type`) VALUES
+(1, 1, 2),
+(2, 2, 3),
+(3, 3, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pm_room_type`
+--
+
+CREATE TABLE `pm_room_type` (
+  `rid` int(11) NOT NULL,
+  `rname` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pm_room_type`
+--
+
+INSERT INTO `pm_room_type` (`rid`, `rname`) VALUES
+(1, 'Urban Luxury'),
+(2, 'Urban basic'),
+(3, 'Urban Cottage'),
+(4, 'Royal');
 
 -- --------------------------------------------------------
 
@@ -1785,9 +1902,9 @@ INSERT INTO `pm_text` (`id`, `lang`, `name`, `value`) VALUES
 (93, 1, 'PAY', 'Payer'),
 (93, 2, 'PAY', 'Check out'),
 (93, 3, 'PAY', 'Check out'),
-(94, 1, 'PAYMENT_PAYPAL_NOTICE', 'Cliquez sur "Payer" ci-dessous, vous allez être redirigé vers le site sécurisé de PayPal'),
-(94, 2, 'PAYMENT_PAYPAL_NOTICE', 'Click on "Check Out" below, you will be redirected towards the secure site of PayPal'),
-(94, 3, 'PAYMENT_PAYPAL_NOTICE', 'Click on "Check Out" below, you will be redirected towards the secure site of PayPal'),
+(94, 1, 'PAYMENT_PAYPAL_NOTICE', 'Cliquez sur \"Payer\" ci-dessous, vous allez être redirigé vers le site sécurisé de PayPal'),
+(94, 2, 'PAYMENT_PAYPAL_NOTICE', 'Click on \"Check Out\" below, you will be redirected towards the secure site of PayPal'),
+(94, 3, 'PAYMENT_PAYPAL_NOTICE', 'Click on \"Check Out\" below, you will be redirected towards the secure site of PayPal'),
 (95, 1, 'PAYMENT_CANCEL_NOTICE', 'Le paiement a été annulé.<br>Merci de votre visite et à bientôt.'),
 (95, 2, 'PAYMENT_CANCEL_NOTICE', 'The payment has been cancelled.<br>Thank you for your visit and see you soon.'),
 (95, 3, 'PAYMENT_CANCEL_NOTICE', 'The payment has been cancelled.<br>Thank you for your visit and see you soon.'),
@@ -1800,9 +1917,9 @@ INSERT INTO `pm_text` (`id`, `lang`, `name`, `value`) VALUES
 (98, 1, 'DOWN_PAYMENT', 'Acompte'),
 (98, 2, 'DOWN_PAYMENT', 'Down payment'),
 (98, 3, 'DOWN_PAYMENT', 'Down payment'),
-(99, 1, 'PAYMENT_CHECK_NOTICE', 'Merci d\'envoyer un chèque à "Panda Resort, Santorini 847 00, Greece" d\'un montant de {amount}.<br>Votre réservation sera validée à réception du paiement.<br>Merci de votre visite et à bientôt !'),
-(99, 2, 'PAYMENT_CHECK_NOTICE', 'Thank you for sending a check of {amount} to "Panda Resort, Santorini 847 00, Greece".<br>Your reservation will be confirmed upon receipt of the payment.<br>Thank you for your visit and see you soon!'),
-(99, 3, 'PAYMENT_CHECK_NOTICE', 'Thank you for sending a check of {amount} to "Panda Resort, Santorini 847 00, Greece".<br>Your reservation will be confirmed upon receipt of the payment.<br>Thank you for your visit and see you soon!'),
+(99, 1, 'PAYMENT_CHECK_NOTICE', 'Merci d\'envoyer un chèque à \"Panda Resort, Santorini 847 00, Greece\" d\'un montant de {amount}.<br>Votre réservation sera validée à réception du paiement.<br>Merci de votre visite et à bientôt !'),
+(99, 2, 'PAYMENT_CHECK_NOTICE', 'Thank you for sending a check of {amount} to \"Panda Resort, Santorini 847 00, Greece\".<br>Your reservation will be confirmed upon receipt of the payment.<br>Thank you for your visit and see you soon!'),
+(99, 3, 'PAYMENT_CHECK_NOTICE', 'Thank you for sending a check of {amount} to \"Panda Resort, Santorini 847 00, Greece\".<br>Your reservation will be confirmed upon receipt of the payment.<br>Thank you for your visit and see you soon!'),
 (100, 1, 'PAYMENT_ARRIVAL_NOTICE', 'Veuillez régler le solde de votre réservation d\'un montant de {amount} à votre arrivée.<br>Merci de votre visite et à bientôt !'),
 (100, 2, 'PAYMENT_ARRIVAL_NOTICE', 'Thank you for paying the balance of {amount} for your booking on your arrival.<br>Thank you for your visit and see you soon!'),
 (100, 3, 'PAYMENT_ARRIVAL_NOTICE', 'Thank you for paying the balance of {amount} for your booking on your arrival.<br>Thank you for your visit and see you soon!'),
@@ -1878,9 +1995,9 @@ INSERT INTO `pm_text` (`id`, `lang`, `name`, `value`) VALUES
 (126, 1, 'MAX_CHILDREN', 'Enfants max'),
 (126, 2, 'MAX_CHILDREN', 'Max children'),
 (126, 3, 'MAX_CHILDREN', 'Max children'),
-(127, 1, 'PAYMENT_2CHECKOUT_NOTICE', 'Cliquez sur "Payer" ci-dessous, vous allez être redirigé vers le site sécurisé de 2Checkout.com'),
-(127, 2, 'PAYMENT_2CHECKOUT_NOTICE', 'Click on "Check Out" below, you will be redirected towards the secure site of 2Checkout.com'),
-(127, 3, 'PAYMENT_2CHECKOUT_NOTICE', 'Click on "Check Out" below, you will be redirected towards the secure site of 2Checkout.com'),
+(127, 1, 'PAYMENT_2CHECKOUT_NOTICE', 'Cliquez sur \"Payer\" ci-dessous, vous allez être redirigé vers le site sécurisé de 2Checkout.com'),
+(127, 2, 'PAYMENT_2CHECKOUT_NOTICE', 'Click on \"Check Out\" below, you will be redirected towards the secure site of 2Checkout.com'),
+(127, 3, 'PAYMENT_2CHECKOUT_NOTICE', 'Click on \"Check Out\" below, you will be redirected towards the secure site of 2Checkout.com'),
 (128, 1, 'COOKIES_NOTICE', 'Les cookies nous aident à fournir une meilleure expérience utilisateur. En utilisant notre site, vous acceptez l\'utilisation de cookies.'),
 (128, 2, 'COOKIES_NOTICE', 'Cookies help us provide better user experience. By using our website, you agree to the use of cookies.'),
 (128, 3, 'COOKIES_NOTICE', 'Cookies help us provide better user experience. By using our website, you agree to the use of cookies.'),
@@ -2007,18 +2124,18 @@ INSERT INTO `pm_text` (`id`, `lang`, `name`, `value`) VALUES
 (172, 1, 'SERVICE', 'Service'),
 (172, 2, 'SERVICE', 'Service'),
 (172, 3, 'SERVICE', 'Service'),
-(173, 1, 'BOOKING_NOTICE', '<h2>Réservez sur notre site</h2><p class="lead mb0">Dépêchez-vous ! Sélectionnez vos chambres, complétez votre réservation et profitez de nos packages et offres spéciales ! <br><b>Meilleur prix garanti !</b></p>'),
-(173, 2, 'BOOKING_NOTICE', '<h2>Book on our website</h2><p class="lead mb0">Hurry up! Select the your rooms, complete your booking and take advantage of our special offers and packages!<br><b>Best price guarantee!</b></p>'),
-(173, 3, 'BOOKING_NOTICE', '<h2>Book on our website</h2><p class="lead mb0">Hurry up! Select the your rooms, complete your booking and take advantage of our special offers and packages!<br><b>Best price guarantee!</b></p>'),
+(173, 1, 'BOOKING_NOTICE', '<h2>Réservez sur notre site</h2><p class=\"lead mb0\">Dépêchez-vous ! Sélectionnez vos chambres, complétez votre réservation et profitez de nos packages et offres spéciales ! <br><b>Meilleur prix garanti !</b></p>'),
+(173, 2, 'BOOKING_NOTICE', '<h2>Book on our website</h2><p class=\"lead mb0\">Hurry up! Select the your rooms, complete your booking and take advantage of our special offers and packages!<br><b>Best price guarantee!</b></p>'),
+(173, 3, 'BOOKING_NOTICE', '<h2>Book on our website</h2><p class=\"lead mb0\">Hurry up! Select the your rooms, complete your booking and take advantage of our special offers and packages!<br><b>Best price guarantee!</b></p>'),
 (174, 1, 'CONTINUE_AS_GUEST', 'Continuer sans m\'enregistrer'),
 (174, 2, 'CONTINUE_AS_GUEST', 'Continue as guest'),
 (174, 3, 'CONTINUE_AS_GUEST', 'Continue as guest'),
 (175, 1, 'NUM_ROOMS', 'Nb chambres'),
 (175, 2, 'NUM_ROOMS', 'Num rooms'),
 (175, 3, 'NUM_ROOMS', 'Num rooms'),
-(176, 1, 'PRIVACY_POLICY_AGREEMENT', '<small>J\'accepte que les informations recueillies par ce formulaire soient stockées dans un fichier informatisé afin de traiter ma demande.<br>Conformément au "Réglement Général sur la Protection des Données", vous pouvez exercer votre droit d\'accès aux données vous concernant et les faire rectifier via le formulaire de contact.</small>'),
-(176, 2, 'PRIVACY_POLICY_AGREEMENT', '<small>I agree that the information collected by this form will be stored in a database in order to process my request.<br>In accordance with the "General Data Protection Regulation", you can exercise your right to access to your data and make them rectified via the contact form.</small>'),
-(176, 3, 'PRIVACY_POLICY_AGREEMENT', '<small>I agree that the information collected by this form will be stored in a database in order to process my request.<br>In accordance with the "General Data Protection Regulation", you can exercise your right to access to your data and make them rectified via the contact form.</small>'),
+(176, 1, 'PRIVACY_POLICY_AGREEMENT', '<small>J\'accepte que les informations recueillies par ce formulaire soient stockées dans un fichier informatisé afin de traiter ma demande.<br>Conformément au \"Réglement Général sur la Protection des Données\", vous pouvez exercer votre droit d\'accès aux données vous concernant et les faire rectifier via le formulaire de contact.</small>'),
+(176, 2, 'PRIVACY_POLICY_AGREEMENT', '<small>I agree that the information collected by this form will be stored in a database in order to process my request.<br>In accordance with the \"General Data Protection Regulation\", you can exercise your right to access to your data and make them rectified via the contact form.</small>'),
+(176, 3, 'PRIVACY_POLICY_AGREEMENT', '<small>I agree that the information collected by this form will be stored in a database in order to process my request.<br>In accordance with the \"General Data Protection Regulation\", you can exercise your right to access to your data and make them rectified via the contact form.</small>'),
 (177, 1, 'COMPLETE_YOUR_BOOKING', 'Terminez votre réservation !'),
 (177, 2, 'COMPLETE_YOUR_BOOKING', 'Complete your booking!'),
 (177, 3, 'COMPLETE_YOUR_BOOKING', 'Complete your booking!'),
@@ -2034,15 +2151,15 @@ INSERT INTO `pm_text` (`id`, `lang`, `name`, `value`) VALUES
 (181, 1, 'DISCOVER_ALSO', 'Découvrez aussi'),
 (181, 2, 'DISCOVER_ALSO', 'Discover also'),
 (181, 3, 'DISCOVER_ALSO', 'Discover also'),
-(182, 1, 'PAYMENT_BRAINTREE_NOTICE', 'Remplissez le formulaire ci-dessous avec les informations de votre carte de crédit, puis cliquez sur "Payer".'),
-(182, 2, 'PAYMENT_BRAINTREE_NOTICE', 'Fill in the form bellow with your credit card information, then click on "Check Out".'),
-(182, 3, 'PAYMENT_BRAINTREE_NOTICE', 'Fill in the form bellow with your credit card information, then click on "Check Out".'),
+(182, 1, 'PAYMENT_BRAINTREE_NOTICE', 'Remplissez le formulaire ci-dessous avec les informations de votre carte de crédit, puis cliquez sur \"Payer\".'),
+(182, 2, 'PAYMENT_BRAINTREE_NOTICE', 'Fill in the form bellow with your credit card information, then click on \"Check Out\".'),
+(182, 3, 'PAYMENT_BRAINTREE_NOTICE', 'Fill in the form bellow with your credit card information, then click on \"Check Out\".'),
 (183, 1, 'COUPON_CODE_FAILURE', 'Erreur : ce code est invalide ou a déjà été utilisé'),
 (183, 2, 'COUPON_CODE_FAILURE', 'Error: this code is invalid or already used'),
 (183, 3, 'COUPON_CODE_FAILURE', 'Error: this code is invalid or already used'),
-(184, 1, 'PAYMENT_RAZORPAY_NOTICE', 'Cliquez sur "Payer", puis remplissez le formulaire avec les informations de votre carte de crédit.'),
-(184, 2, 'PAYMENT_RAZORPAY_NOTICE', 'Click on "Check Out", then fill in the form with your credit card information.'),
-(184, 3, 'PAYMENT_RAZORPAY_NOTICE', 'Click on "Check Out", then fill in the form with your credit card information.');
+(184, 1, 'PAYMENT_RAZORPAY_NOTICE', 'Cliquez sur \"Payer\", puis remplissez le formulaire avec les informations de votre carte de crédit.'),
+(184, 2, 'PAYMENT_RAZORPAY_NOTICE', 'Click on \"Check Out\", then fill in the form with your credit card information.'),
+(184, 3, 'PAYMENT_RAZORPAY_NOTICE', 'Click on \"Check Out\", then fill in the form with your credit card information.');
 
 -- --------------------------------------------------------
 
@@ -2078,9 +2195,7 @@ CREATE TABLE `pm_user` (
 
 INSERT INTO `pm_user` (`id`, `firstname`, `lastname`, `email`, `login`, `pass`, `type`, `add_date`, `edit_date`, `checked`, `fb_id`, `address`, `postcode`, `city`, `company`, `country`, `mobile`, `phone`, `token`) VALUES
 (1, 'LAVANSH', 'RATHORE', 'thegrandmachal@gmail.com', 'admin', '68692c68836e44785d37f522d7ddd180', 'administrator', 1598432108, 1601638356, 1, '', 'N/2 SANJHI CHHAT MAHESH NAGAR', '452002', 'INDORE', 'GRAND MACHAL RESORTS & CLUBS PVT.LTD', 'India', '9630444445', '9630444445', ''),
-(2, 'jassi ', 'singh', 'jasbeerjassi85@gmail.com', 'jasbeer', 'fd336d6f3379197b6299d8853448ab47', 'manager', 1602064578, 1602064587, 1, NULL, '3073 nagar', '452009', 'Indore', 'obabuji', 'India', '9752382628', '9752382628', NULL),
-(4, 'bablu', 'kumawat', 'kumawat@gmail.com', 'bablu', 'e10adc3949ba59abbe56e057f20f883e', 'registered', 1603451849, 1603451849, 1, NULL, 'indore', '452001', 'indore', 'mobile', 'India', '7894561236', '7894561232', NULL),
-(5, 'mahendra', 'pal', 'palismahendra@gmail.com', 'mahen', 'e10adc3949ba59abbe56e057f20f883e', 'receptionist', 1603456122, 1603456122, 1, NULL, '257 shri ram nagar palda naka indore', '452001', 'indore', 'objabuji.com', 'India', '7771917836', '7771917836', NULL);
+(2, 'jassi ', 'singh', 'jasbeerjassi85@gmail.com', 'jasbeer', '61579e438c45b4b75848346d22d0ccbd', 'manager', 1602064578, 1602064587, 1, NULL, '3073 nagar', '452009', 'Indore', 'obabuji', 'India', '9752382628', '9752382628', NULL);
 
 -- --------------------------------------------------------
 
@@ -2261,6 +2376,12 @@ ALTER TABLE `pm_facility_file`
   ADD KEY `facility_file_lang_fkey` (`lang`);
 
 --
+-- Indexes for table `pm_guests`
+--
+ALTER TABLE `pm_guests`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pm_ical_event`
 --
 ALTER TABLE `pm_ical_event`
@@ -2384,6 +2505,18 @@ ALTER TABLE `pm_room_lock`
   ADD KEY `room_lock_fkey` (`id_room`);
 
 --
+-- Indexes for table `pm_room_meta`
+--
+ALTER TABLE `pm_room_meta`
+  ADD PRIMARY KEY (`metaid`);
+
+--
+-- Indexes for table `pm_room_type`
+--
+ALTER TABLE `pm_room_type`
+  ADD PRIMARY KEY (`rid`);
+
+--
 -- Indexes for table `pm_service`
 --
 ALTER TABLE `pm_service`
@@ -2455,231 +2588,295 @@ ALTER TABLE `pm_widget`
 --
 ALTER TABLE `pm_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_activity_file`
 --
 ALTER TABLE `pm_activity_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_activity_session`
 --
 ALTER TABLE `pm_activity_session`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_activity_session_hour`
 --
 ALTER TABLE `pm_activity_session_hour`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_article`
 --
 ALTER TABLE `pm_article`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pm_article_file`
 --
 ALTER TABLE `pm_article_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `pm_booking`
 --
 ALTER TABLE `pm_booking`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
 --
 -- AUTO_INCREMENT for table `pm_booking_activity`
 --
 ALTER TABLE `pm_booking_activity`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_booking_payment`
 --
 ALTER TABLE `pm_booking_payment`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
 --
 -- AUTO_INCREMENT for table `pm_booking_room`
 --
 ALTER TABLE `pm_booking_room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
 --
 -- AUTO_INCREMENT for table `pm_booking_service`
 --
 ALTER TABLE `pm_booking_service`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `pm_booking_tax`
 --
 ALTER TABLE `pm_booking_tax`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `pm_comment`
 --
 ALTER TABLE `pm_comment`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_country`
 --
 ALTER TABLE `pm_country`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=251;
+
 --
 -- AUTO_INCREMENT for table `pm_coupon`
 --
 ALTER TABLE `pm_coupon`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_currency`
 --
 ALTER TABLE `pm_currency`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
 --
 -- AUTO_INCREMENT for table `pm_email_content`
 --
 ALTER TABLE `pm_email_content`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_facility`
 --
 ALTER TABLE `pm_facility`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
 --
 -- AUTO_INCREMENT for table `pm_facility_file`
 --
 ALTER TABLE `pm_facility_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+
+--
+-- AUTO_INCREMENT for table `pm_guests`
+--
+ALTER TABLE `pm_guests`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
 --
 -- AUTO_INCREMENT for table `pm_ical_event`
 --
 ALTER TABLE `pm_ical_event`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_lang`
 --
 ALTER TABLE `pm_lang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `pm_lang_file`
 --
 ALTER TABLE `pm_lang_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `pm_location`
 --
 ALTER TABLE `pm_location`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pm_media`
 --
 ALTER TABLE `pm_media`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_media_file`
 --
 ALTER TABLE `pm_media_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_menu`
 --
 ALTER TABLE `pm_menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
 --
 -- AUTO_INCREMENT for table `pm_message`
 --
 ALTER TABLE `pm_message`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_package`
 --
 ALTER TABLE `pm_package`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `pm_page`
 --
 ALTER TABLE `pm_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- AUTO_INCREMENT for table `pm_page_file`
 --
 ALTER TABLE `pm_page_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_rate`
 --
 ALTER TABLE `pm_rate`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pm_rate_child`
 --
 ALTER TABLE `pm_rate_child`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pm_room`
 --
 ALTER TABLE `pm_room`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_room_calendar`
 --
 ALTER TABLE `pm_room_calendar`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_room_closing`
 --
 ALTER TABLE `pm_room_closing`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `pm_room_file`
 --
 ALTER TABLE `pm_room_file`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT for table `pm_room_lock`
 --
 ALTER TABLE `pm_room_lock`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `pm_room_meta`
+--
+ALTER TABLE `pm_room_meta`
+  MODIFY `metaid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `pm_room_type`
+--
+ALTER TABLE `pm_room_type`
+  MODIFY `rid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_service`
 --
 ALTER TABLE `pm_service`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_slide`
 --
 ALTER TABLE `pm_slide`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
 --
 -- AUTO_INCREMENT for table `pm_slide_file`
 --
 ALTER TABLE `pm_slide_file`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_social`
 --
 ALTER TABLE `pm_social`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_tag`
 --
 ALTER TABLE `pm_tag`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT for table `pm_tax`
 --
 ALTER TABLE `pm_tax`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `pm_text`
 --
 ALTER TABLE `pm_text`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+
 --
 -- AUTO_INCREMENT for table `pm_user`
 --
 ALTER TABLE `pm_user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `pm_widget`
 --
 ALTER TABLE `pm_widget`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- Constraints for dumped tables
 --
@@ -2895,6 +3092,7 @@ ALTER TABLE `pm_text`
 --
 ALTER TABLE `pm_widget`
   ADD CONSTRAINT `widget_lang_fkey` FOREIGN KEY (`lang`) REFERENCES `pm_lang` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

@@ -17,6 +17,9 @@ function getModules($dir, $modules = array())
 {
     global $indexes;
     $realdir = SYSBASE.$dir;
+    
+    // print_r($realdir);
+    // die;
 
     $rep = opendir($realdir) or die('Error directory opening: '.$realdir);
     
@@ -115,4 +118,6 @@ if(isset($indexes[$dirname])){
     define('DIR', $module->getDir().'/');
     
     $permissions = $module->getPermissions($_SESSION['user']['type']);
+    // print_r($permissions);
+    // die;
 }
