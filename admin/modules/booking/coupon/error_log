@@ -1,7 +1,0 @@
-[27-Aug-2020 08:49:47 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[27-Aug-2020 08:49:49 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[01-Oct-2020 10:27:21 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[02-Oct-2020 09:43:07 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[02-Oct-2020 10:44:23 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[02-Oct-2020 12:04:56 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
-[17-Oct-2020 09:15:08 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33

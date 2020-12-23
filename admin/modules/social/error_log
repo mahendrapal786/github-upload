@@ -1,1 +1,0 @@
-[01-Oct-2020 10:03:27 UTC] PHP Deprecated:  __autoload() is deprecated, use spl_autoload_register() instead in /home/tgmsmeonlinebusi/public_html/common/lib.php on line 33
