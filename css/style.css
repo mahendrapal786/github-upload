@@ -5,7 +5,6 @@ body{
 	margin: 0;
 	font-family: 'Poppins', sans-serif;
 	color: var(--black);
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -31,10 +30,13 @@ a {
  padding: 0;
 }
 .logo img { 
-	width: 50px;
+	width: 148px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
  }
  .main-menu li {
-   padding: 20px 8px;
+   padding: 24px 8px;
  }
 .main-menu li a {
  color: var(--black);
@@ -72,6 +74,10 @@ cursor: pointer;
 }
 .main-menu .book_stay a {
 	color:var(--color-white);  
+}
+
+.main-menu .book_stay svg {
+     height: 25px;
 }
 
 .banner_hero {
@@ -118,12 +124,106 @@ cursor: pointer;
 	display: flex;
 	display: -webkit-box;
 	display: -moz-box;
-    display: -ms-flexbox;
-    margin-bottom: 25px;
+  display: -ms-flexbox;
+  margin-bottom: 25px;
 }
 .special_content {
-   padding-left: 8px;
+   padding-left: 15px;
 }
 .special_content p {
-	margin-bottom: 0;
+  margin-bottom: 0;
+  font-size: 14px;
+  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-poppins);
+}
+
+/* home welcome section  */
+section.welcome {
+  padding: 60px 0;
+  background-image: url("../img/welcome_background.png");
+  background-repeat: round;
+}
+section.welcome .welcome_content {
+width: 100%;
+}
+section.welcome .welcome_content h2 {
+font-weight: bold;
+}
+section.welcome .welcome_content p {
+font-size: 16px;
+}
+a.book_stay_btn {
+ display: inline-block;
+ background-color: var(--black);
+ padding: 10px;
+ color: #FFF;
+ border-radius: 0px 100px 100px 100px;
+ text-decoration:none;
+}
+section.welcome .welcome_img img.beach_huts_two_first {
+    width: 500px;
+    float: right;
+    position: relative;
+}
+section.welcome .welcome_img img.beach_huts_two_second {
+    width: 300px;
+    position: absolute;
+    bottom: 93px;
+}
+section.welcome .welcome_img a.explore_goa_btn {
+ display: inline-block;
+ background-color: var(--primary);
+ padding: 10px;
+ color: #FFF;
+ border-radius: 0px 100px 100px 100px;
+ position: relative;
+ left: 323px;
+ bottom: 22px;
+ text-decoration:none;
+}
+/* home best beach section */
+div.best_beach_cottages_area {
+  display: flex;
+  flex-wrap: wrap;
+  background: #090908;
+  position: relative;
+}
+div.best_beach_cottages_area .best_beach_heading {
+  width: 100%;
+  max-width: 40%;
+  position: absolute;
+  left: 438px;
+  text-align: center;
+  top: 30px;
+  padding:10px;
+ 
+ background: #FFFFFF;
+
+}
+div.best_beach_cottages_area .best_beach_heading h2 {
+  color: #090908;
+}
+div.best_beach_cottages_area .best_beach_img {
+  width: 50%;
+  background-image: url("../img/best-beach.png");
+  background-size:cover;
+}
+
+div.best_beach_cottages_area .best_beach_content {
+  width: 50%;
+  padding-top: 115px;
+  padding-left: 30px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+div.best_beach_cottages_area .best_beach_content p {
+color: #FFF;
+line-height: 26px;
+}
+div.best_beach_cottages_area .best_beach_content .best_beach_btn {
+ display: inline-block;
+ background-color: var(--primary);
+ padding: 10px;
+ color: #FFF;
+ border-radius: 0px 100px 100px 100px;
+ text-decoration:none;
 }
