@@ -132,59 +132,62 @@ cursor: pointer;
 }
 .special_content p {
   margin-bottom: 0;
-  font-size: 14px;
-  font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-18)/var(--unnamed-line-spacing-28) var(--unnamed-font-family-poppins);
+  font-size: 16px;
+ font-family: 'Poppins';
+ text-align: left;
+ color: #090908;
+ word-break: break-word;
 }
 
 /* home welcome section  */
-section.welcome {
+.welcome {
   padding: 75px 0;
   background-image: url("../img/welcome_background.png");
   background-repeat: round;
 }
-section.welcome div.welcome_area {
+.welcome div.welcome_area {
   display: flex;
   flex-wrap: wrap;
 }
 
-section.welcome div.welcome_area .welcome_content h2 {
+.welcome div.welcome_area .welcome_content h2 {
 font-size: 52px;  
 font-weight: bold;
 font-family: 'Playfair Display', serif;
 }
-section.welcome div.welcome_area .welcome_content strong { 
+.welcome div.welcome_area .welcome_content strong { 
   font-size: 15px;
   color: #090908;
   font-family: 'Poppins';
 }
-section.welcome div.welcome_area .welcome_content p { 
+.welcome div.welcome_area .welcome_content p { 
  line-height: 1.8;
  margin-top:12px; 
 }
 
-section.welcome div.welcome_area .welcome_content {
+.welcome div.welcome_area .welcome_content {
  flex-basis:50%;
  padding: 0 0 0 100px;
 }
-section.welcome div.welcome_area .welcome_img {
+.welcome div.welcome_area .welcome_img {
 flex-basis:50%;
 text-align: right;
 }
-section.welcome div.welcome_area .welcome_img .welcome_img_area {
+.welcome div.welcome_area .welcome_img .welcome_img_area {
 display: inline-block;
 position: relative;
 }
-section.welcome div.welcome_area .welcome_img .welcome_img_area img.welcome_beach_huts {
+.welcome div.welcome_area .welcome_img .welcome_img_area img.welcome_beach_huts {
 width: 640px;
 position: relative;
 z-index: 2;
 }
-section.welcome div.welcome_area .welcome_img .welcome_img_area .welcome_pattern {
+.welcome div.welcome_area .welcome_img .welcome_img_area .welcome_pattern {
  position: absolute;
  top: -54px;
  z-index: 1;
 }
-section.welcome div.welcome_area .welcome_content a.book_stay_btn {
+.welcome div.welcome_area .welcome_content a.book_stay_btn {
  display: inline-block;
  background-color: var(--black);
  padding: 10px 43px;
@@ -193,7 +196,10 @@ section.welcome div.welcome_area .welcome_content a.book_stay_btn {
  text-decoration:none;
  font-size: 18px;
 }
-section.welcome .welcome_img .welcome_img_area a.explore_goa_btn {
+.welcome div.welcome_area .welcome_content a.book_stay_btn:hover {
+   background-color: var(--primary);
+ }
+.welcome .welcome_img .welcome_img_area a.explore_goa_btn {
  position: absolute;
  left: 59%;
  bottom: 18%;
@@ -205,6 +211,7 @@ section.welcome .welcome_img .welcome_img_area a.explore_goa_btn {
  background-color: var(--primary);
  z-index: 3;
 }
+.welcome .welcome_img .welcome_img_area a.explore_goa_btn:hover { background-color: var(--black); }
 /* home best beach section */
 div.best_beach_cottages_area {
   display: flex;
@@ -220,13 +227,31 @@ div.best_beach_cottages_area .best_beach_heading {
   text-align: center;
   top: 30px;
   padding:10px;
- 
- background: #FFFFFF;
-
+  background: #FFFFFF;
 }
+/*div.best_beach_cottages_area .best_beach_heading::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    background: red;
+    left: 0;
+    top: 0;
+    height: 66px;
+}
+div.best_beach_cottages_area .best_beach_heading::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: red;
+    right: 0;
+}*/
 div.best_beach_cottages_area .best_beach_heading h2 {
   color: #090908;
 }
+/* ribbon css start */
+
+/* ribbon css end */
 div.best_beach_cottages_area .best_beach_img {
   width: 50%;
   background-image: url("../img/best-beach.png");
@@ -253,21 +278,26 @@ div.best_beach_cottages_area .best_beach_content .best_beach_btn {
  text-decoration:none;
  font-size: 18px;
 }
-
 /* home gallery */
-section.home_gallery {
+.home_gallery {
   background-image: url("../img/gallary-bg.png");
 }
-section.home_gallery .top_gallery_area{
+.home_gallery .top_gallery_area{
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
-section.home_gallery .gallery_cat_tab a.active {
- border-bottom: 2px solid var(--primary);
+.home_gallery .gallery_cat_tab a.active {
+    border-bottom: 2px solid var(--primary);
+    border-radius: 0;
+    margin-bottom: -3px;
+
 }
-section.home_gallery .gallery_cat_tab .gallery_cat_links {
+.gallery_cat_links .btn {
+ border-radius: 0;
+}
+.home_gallery .gallery_cat_tab .gallery_cat_links {
  border-bottom: 2px solid #ccc;
   display: inline-block;
   }
@@ -324,12 +354,12 @@ section.home_gallery .gallery_cat_tab .gallery_cat_links {
   padding: 10px 10px;
 }
 
-section.home_gallery .home_gallery_btn_area {  
+.home_gallery .home_gallery_btn_area {  
   text-align: center;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-section.home_gallery .home_gallery_btn_area .view_gallery_btn {
+.home_gallery .home_gallery_btn_area .view_gallery_btn {
 display: inline-block;
 background-color: var(--black);
 padding: 13px 47px;
@@ -338,30 +368,31 @@ border-radius: 0px 100px 100px 100px;
 text-decoration:none;
 font-size: 18px;
 }
+.home_gallery .home_gallery_btn_area .view_gallery_btn:hover { background-color: var(--primary); }
 /*  Beach Booking */
-section.beach_booking {
+.beach_booking {
   padding: 60px 0;
   background-image: url("../img/beach_booking_background.png");
   background-repeat: round;
 }
 
-section.beach_booking .beach_booking_content h2 {
+.beach_booking .beach_booking_content h2 {
 font-size: 52px;  
 font-weight: bold;
 font-family: 'Playfair Display', serif;
 }
 
-section.beach_booking .beach_booking_content p {
+.beach_booking .beach_booking_content p {
 line-height: 1.8;
 margin-top:12px; 
 }
-section.beach_booking .beach_booking_img {
+.beach_booking .beach_booking_img {
   position: relative;
   background: transparent;
   z-index: 1;
 }
 
-section.beach_booking .beach_booking_img .image_square_corner {
+.beach_booking .beach_booking_img .image_square_corner {
   position: absolute;
   background: #699B04;
   border-radius: 20px;
@@ -372,11 +403,11 @@ section.beach_booking .beach_booking_img .image_square_corner {
   z-index: -1;
 }
 
-section.beach_booking .beach_booking_img img {
+.beach_booking .beach_booking_img img {
 border-radius: 12px;
 }
 
-section.beach_booking .search_form {
+.beach_booking .search_form, .top_search_form .search_form {
 position: absolute;
 bottom: 78px;
 left: 50%;
@@ -389,7 +420,7 @@ width: 75%;
 padding: 24px 15px;
 z-index: 1;
 }
-section.beach_booking .search_form input {
+.beach_booking .search_form input, .top_search_form .search_form input {
    border: none;
    font-weight: 500;
    font-size: 18px;
@@ -397,18 +428,23 @@ section.beach_booking .search_form input {
    position: relative;
     width: 60%;
 }
+.beach_booking .search_form input:focus, .top_search_form .search_form input:focus {
+     border-color: inherit;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+ }
 
-section.beach_booking .search_form .check_in_col svg { 
+.beach_booking .search_form svg, .top_search_form .search_form .check_in_col svg { 
   position: absolute;
   bottom: 0;
   left: 65%;
 }
-section.beach_booking .search_form .check_out_col svg { 
+.beach_booking .search_form svg, .top_search_form .search_form .check_out_col svg { 
   position: absolute;
   bottom: 0;
   left: 65%;
 }
-section.beach_booking .search_form label {
+.beach_booking .search_form label, .top_search_form .search_form label {
 color: #9F9F9F;
 text-align: left;
 margin:0;
@@ -427,6 +463,7 @@ font-size: 18px;
 .search_form_btn:hover {
 text-decoration:none;
 color: var(--white);
+   background-color: var(--primary);
 }
 .check_in_col {
   padding-left:10px !important;
@@ -434,40 +471,40 @@ color: var(--white);
 .check_out_col {
   padding-left:10px !important;
 }
-section.beach_booking .beach_booking_content .demo_pattern {
+.beach_booking .beach_booking_content .demo_pattern {
   padding-left: 37px;
   padding-top: 24px;
 }
 
 /* testimoanial  */
-section.testimonial {
+.testimonial {
   background-image: url("../img/testimonial_bg.jpg");
   background-repeat: round;
   min-height: 600px;
 }
 
-section.testimonial .testimonial_heading {
+.testimonial .testimonial_heading {
   color: #090908;
   font-size: 52px;
   padding-top: 100px;
  font-weight: bold;
 }
 
-section.testimonial .testimonial_content {
+.testimonial .testimonial_content {
 background: #FFFFFF;
 border-radius: 20px;
 padding: 41px 20px;
 }
-section.testimonial .testimonial_content .fa-star.checked {
+.testimonial .testimonial_content .fa-star.checked {
   color:#FFAA00;
 }
 
-section.testimonial .carousel-inner {
+.testimonial .carousel-inner {
   max-width: 800px;
     margin: 0 auto;
 }
 
-section.testimonial .testimonial_icon_quote {
+.testimonial .testimonial_icon_quote {
  display: inline-block;
  background-color: var(--primary);
  border-radius: 40px;
@@ -479,40 +516,56 @@ section.testimonial .testimonial_icon_quote {
  z-index: 1;
  top: 40px;
 }
-section.testimonial #myCarousel a.carousel-control-prev {
-left: 22px;
+.testimonial #myCarousel a.testimonial_btn_prev {
+    background-color: var(--black);
+    padding: 14px 20px;
+    color: #FFF;
+    border-radius: 0px 100px 100px 100px;
+    text-decoration: none;
+    border: 2px solid #FFFFFF;
+    position: absolute;
+    top: 96px;
+  left: 62px;
 }
-section.testimonial #myCarousel a.carousel-control-next {
-right: 22px;
+.testimonial #myCarousel a.testimonial_btn_next {
+background-color: var(--black);
+padding: 14px 20px;
+color: #FFF;
+border-radius: 0px 100px 100px 100px;
+text-decoration: none;
+border: 2px solid #FFFFFF;
+position: absolute;
+top: 96px;
+right: 58px;
 }
 /* upcoming events  */
-section.upcoming_events {
+.upcoming_events {
   background: #FBFBFD;
    padding: 60px 0;
 }
-section.upcoming_events .top_heading h2 {
+.upcoming_events .top_heading h2 {
     padding: 30px 0;
     color: var(--black);
     font-weight: bold;
     font-size: 52px;
 }
-section.upcoming_events .left_event_section .left_event_content {
+.upcoming_events .left_event_section .left_event_content {
 position: absolute;
 top: 223px;
 left: 31px;
 right: 45px;
 color: var(--white);
 }
-section.upcoming_events .left_event_section .left_event_content h3 {
+.upcoming_events .left_event_section .left_event_content h3 {
 font-family: 'Poppins', sans-serif;
 font-size: 26px;
 font-weight: bold;
 }
-section.upcoming_events .left_event_section .left_event_content p {
+.upcoming_events .left_event_section .left_event_content p {
 font-family: 'Poppins', sans-serif;
 font-size: 14px;
 }
-section.upcoming_events .left_event_section .left_event_content span {
+.upcoming_events .left_event_section .left_event_content span {
 background: var(--white);
 border-radius: 20px;
 color: #727272;
@@ -520,14 +573,14 @@ padding: 3px 10px;
 position: relative;
 bottom: 15px;
 }
-section.upcoming_events .left_event_section .card {
+.upcoming_events .left_event_section .card {
 background-color: #FBFBFD;
 border: 0;
 }
-section.upcoming_events .left_event_section .card img {
+.upcoming_events .left_event_section .card img {
 border-radius: 20px;
 }
-section.upcoming_events .left_event_section .left_event_content .left_event_btn {
+.upcoming_events .left_event_section .left_event_content .left_event_btn {
 background-color: var(--primary);
 padding: 14px 20px;
 color: #FFF;
@@ -538,44 +591,44 @@ position: absolute;
 top: 5px;
 right: -21px;
 }
-section.upcoming_events .left_event_section .left_event_content .event_rectangle_corner {
+.upcoming_events .left_event_section .left_event_content .event_rectangle_corner {
 position: absolute;
 background: #699B04;
 width: 5px;
 height: 64px;
 left: -31px;
 }
-section.upcoming_events .right_event_section .card {
+.upcoming_events .right_event_section .card {
 background: var(--white);
 border: 1px solid #E3E3E3;
 border-radius: 20px;
 box-shadow: 0px 0px 20px #00000029;
 }
-section.upcoming_events .right_event_section .card  figure {
+.upcoming_events .right_event_section .card  figure {
 margin: 0 0 0;
 }
-section.upcoming_events .right_event_section .card  img {
+.upcoming_events .right_event_section .card  img {
 border-radius: 20px 0 0 20px;
 }
-section.upcoming_events .right_event_section .card {
+.upcoming_events .right_event_section .card {
 background-color: #FBFBFD;
 border: 0;
 margin-bottom: 22px;
 z-index: 1;
 }
-section.upcoming_events .right_event_section .right_event_content h3 {
+.upcoming_events .right_event_section .right_event_content h3 {
 font-family: 'Poppins', sans-serif;
 font-size: 20px;
 font-weight: bold;
 padding-top: 20px;
 }
-section.upcoming_events .right_event_section .right_event_content p {
+.upcoming_events .right_event_section .right_event_content p {
 font-family: 'Poppins', sans-serif;
 font-size: 14px;
 padding-right: 12px;
     margin-bottom: 0;
 }
-section.upcoming_events .right_event_section .right_event_content span {
+.upcoming_events .right_event_section .right_event_content span {
 background: #535353;
 color: #FBFBFD;
 padding: 3px 10px;
@@ -584,7 +637,7 @@ border-radius: 20px;
 top: 11px;
 }
 
-section.upcoming_events .right_event_section .right_event_content .right_event_btn {
+.upcoming_events .right_event_section .right_event_content .right_event_btn {
 background-color: var(--primary);
 padding: 14px 20px;
 color: #FFF;
@@ -596,7 +649,7 @@ top: 56px;
 right: -14px;
 }
 
-section.upcoming_events .right_event_section .event_pattern {
+.upcoming_events .right_event_section .event_pattern {
 position: absolute;
 top: -97px;
 right: -48px;
@@ -623,6 +676,7 @@ text-align: center;
 }
 .footer .pages { 
  padding-top: 40px;
+     padding-left: 40px;
 }
 /*footer .pages ul li {
 position: relative;
@@ -673,14 +727,137 @@ text-align: right;
   font-weight: normal;
  font-family: 'Poppins', sans-serif;
  position: relative;
+     top: 40px;
+      opacity: 0.3;
 }
 .footer .copyright:before {
  content: "";
- display: block;
- width: 130px;
- height: 5px;
- border: 1px solid #FFFFFF;
- left: 0;
- top: 50%;
- position: absolute;
+    display: block;
+    width: 380px;
+ 
+    border-top: 1px solid #FFFFFF;
+    left: -389px;
+    top: 50%;
+    position: absolute;
+    opacity: 0.3;
+}
+/* top banner area  */
+.banner_hero .top_banner_content {
+position: absolute;
+bottom: 15%;
+left: 5%;
+}
+.banner_hero .top_banner_content .banner_heading {
+background: #121319;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    padding: 10px 20px;
+    color: #FBFBFD;
+    font-size: 30px;
+    opacity: 0.6;
+}
+.banner_hero .top_banner_content .banner_title {
+    font-size: 4em;
+    color: #fff;
+    text-shadow: 0 2px black;
+    font-weight: 600;
+        margin: 12px 0;
+}
+.banner_hero .top_banner_content .play_circle {
+    height: 65px;
+    width: 65px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+}
+.banner_hero .top_banner_content .play_circle svg {
+    position: absolute;
+    z-index: 5;
+    left: 3px;
+    right: 0;
+    top: 25px;
+    margin: 0 auto;
+}
+.banner_hero .top_banner_content .play_circle::before {
+    content: '';
+    width: 48px;
+    height: 48px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 8px;
+    bottom: 0;
+    margin: 0 auto;
+    border-radius: 100px;
+}
+
+.banner_hero .top_banner_content .play_circle svg path.a {
+    fill: #699b04!important;
+}
+
+span.play_text {
+    position: absolute;
+    left: 85px;
+    bottom: 25px;
+    color: #fff;
+    font-weight: 200;
+}
+
+.banner_hero .top_search_form {
+    position: relative;
+    top: 133px;
+}
+
+
+
+
+
+@media (min-width: 991px) {
+  .toggle__nav, .closebtn {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+
+  .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  text-align:center;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover{
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
