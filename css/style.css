@@ -154,7 +154,9 @@ text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
   display: flex;
   flex-wrap: wrap;
 }
-
+.welcome_content_text {
+  padding: 0 15px;
+}
 .welcome div.welcome_area .welcome_content h2 {
 font-size: 52px;  
 font-weight: bold;
@@ -172,7 +174,8 @@ font-family: 'Playfair Display', serif;
 
 .welcome div.welcome_area .welcome_content {
  flex-basis:50%;
- padding: 0 0 0 100px;
+/* padding: 0 0 0 100px;*/
+padding-left: calc((100% - 1350px)/2);
 }
 .welcome div.welcome_area .welcome_img {
 flex-basis:50%;
@@ -187,11 +190,12 @@ width: 640px;
 position: relative;
 z-index: 2;
 top: 14px;
-right: 15px;
+/*right: 15px;*/
 }
 .welcome div.welcome_area .welcome_img .welcome_img_area .welcome_pattern {
  position: absolute;
  top: -54px;
+ left:14px;
  z-index: 1;
 }
 .welcome div.welcome_area .welcome_content a.book_stay_btn {
@@ -202,6 +206,7 @@ right: 15px;
  border-radius: 0px 100px 100px 100px;
  text-decoration:none;
  font-size: 18px;
+ transition: all 0.3s ease;
 }
 .welcome div.welcome_area .welcome_content a.book_stay_btn:hover {
    background-color: var(--primary);
@@ -217,9 +222,14 @@ right: 15px;
  font-size: 18px;
  background-color: var(--primary);
  z-index: 3;
+ transition: all 0.3s ease;
 }
 .welcome .welcome_img .welcome_img_area a.explore_goa_btn:hover { background-color: var(--black); }
 /* home best beach section */
+.best_beach_cottages:before {
+  content: '';
+  
+}
 div.best_beach_cottages_area {
   display: flex;
   flex-wrap: wrap;
@@ -375,6 +385,7 @@ color: #FFF;
 border-radius: 0px 100px 100px 100px;
 text-decoration:none;
 font-size: 18px;
+transition: all 0.3s ease;
 }
 .home_gallery .home_gallery_btn_area .view_gallery_btn:hover { background-color: var(--primary); }
 /*  Beach Booking */
@@ -417,7 +428,7 @@ border-radius: 12px;
 
 .beach_booking .search_form, .top_search_form .search_form {
 position: absolute;   
-bottom: 0px;
+bottom: -26px;
 background: var(--white);
 border: 1px solid #E3E3E3;
 border-radius: 10px;
@@ -473,6 +484,7 @@ border-radius: 0px 100px 100px 100px;
 text-decoration:none;
 font-size: 18px;
 align-self: center;
+transition: all 0.3s ease;
 }
 .search_form_btn:hover {
 text-decoration:none;
@@ -486,10 +498,10 @@ background-color: var(--primary);
   padding-left:10px !important;
 }
 .beach_booking .beach_booking_content .demo_pattern {
-  padding-left: 37px;
-  padding-top: 24px;
+ position: relative;
+ left: 2%;
+ top: 56px;
 }
-
 /* testimoanial  */
 .testimonial {
   background-image: url("../img/testimonial_bg.jpg");
@@ -906,3 +918,27 @@ span.play_text {
 @media (min-width: 1200px) {
 .container { max-width: 1350px; }
 }
+/* responsive */
+/*@media (min-width: 1281px) { 
+
+}*/
+/*@media (min-width: 1281px) {
+  .special_content p { font-size: 16px; } 
+  .welcome div.welcome_area .welcome_content {
+     padding-left: 16px;
+  }
+}*/
+@media(max-width:1200px){
+  .container { max-width:100%; }
+}
+@media (min-width: 1281px) and (max-width: 1350px) {
+  .relaxing_beach_form .search_form {
+    bottom: 22px;   
+  }
+  .upcoming_events .right_event_section .card img {
+    max-height: 190px;
+  } 
+}
+/*@media (min-width: 1025px) and (max-width: 1280px) {  
+   
+}*/
