@@ -425,10 +425,14 @@ margin-top:12px;
 .beach_booking .beach_booking_img img {
 border-radius: 12px;
 }
-
-.beach_booking .search_form, .top_search_form .search_form {
+.top_search_form .search_form { 
+  bottom: -4px;
+}
+.beach_booking .search_form {
+   bottom: -26px;
+}
+.beach_booking .search_form, .top_search_form .search_form { 
 position: absolute;   
-bottom: -26px;
 background: var(--white);
 border: 1px solid #E3E3E3;
 border-radius: 10px;
@@ -705,6 +709,12 @@ box-shadow: 0px 3px 6px #00000029;
   max-height: 202px;
 }
 
+/*.upcoming_events .right_event_section {
+  background-image: url(../img/relaxing_beach_pattern.png);
+background-repeat:no-repeat;
+background-position:100% 100%;
+}*/
+
 .upcoming_events .right_event_section .event_pattern {
 position: absolute;
 top: -72px;
@@ -916,6 +926,9 @@ span.play_text {
 }
 
 @media (min-width: 1200px) {
+.container { max-width: 1180px; }
+}
+@media (min-width: 1300px) {
 .container { max-width: 1350px; }
 }
 /* responsive */
@@ -931,14 +944,28 @@ span.play_text {
 @media(max-width:1200px){
   .container { max-width:100%; }
 }
-@media (min-width: 1281px) and (max-width: 1350px) {
-  .relaxing_beach_form .search_form {
-    bottom: 22px;   
-  }
-  .upcoming_events .right_event_section .card img {
+@media (min-width: 1280px) and (max-width: 1350px) {
+ .upcoming_events .right_event_section .card img {
     max-height: 190px;
   } 
+ .beach_booking .beach_booking_content .demo_pattern {
+   top: 36px;
+  }
+  div.relaxing_beach_form .search_form {
+    bottom: -4px;
+  }
+ .testimonial #myCarousel a.testimonial_btn_prev { left: 8%; } 
+ .testimonial #myCarousel a.testimonial_btn_next { right: 8%; } 
+ .beach_booking .search_form {
+      max-width: 950px;
+      bottom: -2px;
+ }
+ .beach_booking .beach_booking_content h2 { font-size: 41px; }
+ .ribbon { left: 28%; }
+ .footer .copyright { font-size: 12px; }
+ .footer .pages { padding-left: 16px; }
+     
 }
-/*@media (min-width: 1025px) and (max-width: 1280px) {  
-   
+/*@media (min-width: 1025px) and (max-width: 1279px) {  
+   .main-menu li { padding: 24px 5px; }
 }*/
