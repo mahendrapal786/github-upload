@@ -25,6 +25,15 @@ a {
   -ms-transition: all ease-in-out;
 }
 
+.container-fix {
+ width: 100%;
+ padding-right: 0px;
+ padding-left: 0px;
+ margin-right: auto;
+ margin-left: auto;
+ max-width: 1900px;
+}
+
 .header .navbar {
  background-color: var(--white);
  padding: 0;
@@ -103,20 +112,18 @@ cursor: pointer;
   font-size: 52px;
 }
 .title_ele h2 > span {
- color: var(--primary);
-/* border-bottom: 2px solid rgba(105, 155, 4, 0.3);
- padding-bottom: 3px;*/
+color: var(--primary);
 font-weight: bold;
-border-bottom: 1px solid rgba(105, 155, 4, 0.7);
 display: inline-block;
 line-height: 0.95;
-text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
+text-decoration: underline rgb(105, 155, 4 , 0.4) 2px;
 }
 .welcome_item_area {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 }
-.welcome_first_item {
+/*.welcome_first_item {
   flex-basis: 40%;
 }
 .welcome_second_item {
@@ -124,7 +131,7 @@ text-shadow: 2px 2px white, 2px -2px white, -2px 2px white, -2px -2px white;
 }
 .welcome_third_item {
   flex-basis: 30%;
-}  
+}*/  
 .special_item {
   display: flex;
   display: -webkit-box;
@@ -175,7 +182,7 @@ font-family: 'Playfair Display', serif;
 .welcome div.welcome_area .welcome_content {
  flex-basis:50%;
 /* padding: 0 0 0 100px;*/
-padding-left: calc((100% - 1350px)/2);
+/*padding-left: calc((100% - 1350px)/2);*/
 }
 .welcome div.welcome_area .welcome_img {
 flex-basis:50%;
@@ -185,18 +192,23 @@ text-align: right;
 display: inline-block;
 position: relative;
 }
+
+.welcome div.welcome_area .welcome_img .welcome_img_area:before {
+position: absolute;
+content: "";
+top: -56px;
+left: 6px;
+opacity: 0.2;
+width: 173px;
+height: 170px;
+background-image: radial-gradient(circle at 50%, #000 2px, #fff 3px);
+background-size: 25px 25px;
+}
 .welcome div.welcome_area .welcome_img .welcome_img_area img.welcome_beach_huts {
 width: 640px;
 position: relative;
 z-index: 2;
 top: 14px;
-/*right: 15px;*/
-}
-.welcome div.welcome_area .welcome_img .welcome_img_area .welcome_pattern {
- position: absolute;
- top: -54px;
- left:14px;
- z-index: 1;
 }
 .welcome div.welcome_area .welcome_content a.book_stay_btn {
  display: inline-block;
@@ -226,15 +238,25 @@ top: 14px;
 }
 .welcome .welcome_img .welcome_img_area a.explore_goa_btn:hover { background-color: var(--black); }
 /* home best beach section */
-.best_beach_cottages:before {
-  content: '';
-  
-}
-div.best_beach_cottages_area {
+.best_beach_cottages {
   display: flex;
   flex-wrap: wrap;
   background: #090908;
   position: relative;
+}
+.best_beach_cottages:before { 
+content: "";
+width: 50%;
+height: 100%;
+position: absolute;
+background-image: url("../img/best-beach.png");
+background-size:cover;
+}
+.best_beach_cottages:after { 
+content: "";
+width: 50%;
+height: 100%;
+position: absolute;
 }
 /* ribbon css start */
 .ribbon {
@@ -268,21 +290,17 @@ font-family: 'Playfair Display', serif;
     right: -60px;
  }
 /* ribbon css end */
-div.best_beach_cottages_area .best_beach_img {
+.best_beach_cottages .best_beach_content {
   width: 50%;
-  background-image: url("../img/best-beach.png");
-  background-size:cover;
+  /*padding: 150px 50px 30px 35px;*/
+  padding: 150px 50px 60px 35px;
+  margin-left: auto;
 }
-
-div.best_beach_cottages_area .best_beach_content {
-  width: 50%;
-  padding: 150px 50px 30px 35px;
-}
-div.best_beach_cottages_area .best_beach_content p {
+.best_beach_cottages .best_beach_content p {
 color: #FFF;
 line-height: 26px;
 }
-div.best_beach_cottages_area .best_beach_content .best_beach_btn {
+.best_beach_cottages .best_beach_content .best_beach_btn {
  display: inline-block;
  background-color: var(--primary);
  padding: 10px 38px;
@@ -309,7 +327,7 @@ font-size: 41px;
 .home_gallery .gallery_cat_tab a.active {
     border-bottom: 2px solid var(--primary);
     border-radius: 0;
-    margin-bottom: -3px;
+    margin-bottom: -2px;
 
 }
 .gallery_cat_links .btn {
@@ -390,11 +408,11 @@ transition: all 0.3s ease;
 .home_gallery .home_gallery_btn_area .view_gallery_btn:hover { background-color: var(--primary); }
 /*  Beach Booking */
 .beach_booking {
-  padding: 100px 0;
+  padding: 100px 0 150px 0;
+ /* padding: 100px 0;*/
   background-image: url("../img/beach_booking_background.png");
   background-repeat: round;
 }
-
 .beach_booking .beach_booking_content h2 {
 font-size: 52px;  
 font-weight: bold;
@@ -411,13 +429,14 @@ margin-top:12px;
   z-index: 1;
 }
 
-.beach_booking .beach_booking_img .image_square_corner {
+.beach_booking .beach_booking_img:after { 
+  content: "";
   position: absolute;
   background: #699B04;
   border-radius: 20px;
-  width: 10vw;
-  height: 10vw;
-  top: -19px;
+  width: 150px;
+  height: 128px;
+  top: -17px;
   left: -19px;
   z-index: -1;
 }
@@ -426,11 +445,35 @@ margin-top:12px;
 border-radius: 12px;
 }
 .top_search_form .search_form { 
-  bottom: -4px;
+  bottom: 0px;
+}
+/*.beach_booking .search_form {
+  bottom: 0px;
+}*/
+.relaxing_beach_form {
+  position: relative;
+}
+
+.relaxing_beach_form:after {
+position: absolute;
+content: "";
+bottom: -92px;
+left:0px;
+opacity: 0.2;
+width: 250px;
+height: 250px;
+background-image: radial-gradient(circle at 50%, #000 2px, #fff 3px);
+background-size: 26px 26px;
+}
+
+.relaxing_beach_form img.demo_pattern {
+  position: absolute;
+  bottom: -90px;
 }
 .beach_booking .search_form {
-   bottom: -26px;
+ bottom: -61px;
 }
+
 .beach_booking .search_form, .top_search_form .search_form { 
 position: absolute;   
 background: var(--white);
@@ -501,16 +544,12 @@ background-color: var(--primary);
 .check_out_col {
   padding-left:10px !important;
 }
-.beach_booking .beach_booking_content .demo_pattern {
- position: relative;
- left: 2%;
- top: 56px;
-}
 /* testimoanial  */
 .testimonial {
   background-image: url("../img/testimonial_bg.jpg");
   background-repeat: round;
   min-height: 600px;
+  background-size:cover;
 }
 
 .testimonial .testimonial_heading {
@@ -580,21 +619,18 @@ border-radius: 20px;
 }
 /* upcoming events  */
 .upcoming_events {
-  background: #FBFBFD;
-  padding-top: 69px;
-  padding-bottom: 100px;
+background: #FBFBFD;
+padding-top: 69px;
+padding-bottom: 100px;
 }
 .upcoming_events .top_heading h2 {
-    padding: 30px 0;
-    color: var(--black);
-    font-weight: bold;
-    font-size: 52px;
+padding: 30px 0;
+color: var(--black);
+font-weight: bold;
+font-size: 52px;
 }
 .upcoming_events .left_event_section .left_event_content {
 position: absolute;
-/*top: 223px;
-left: 31px;
-right: 45px; */
 left:4%;
 right: 8%;
 bottom: 10%;
@@ -643,6 +679,19 @@ width: 5px;
 height: 64px;
 left: -26px;
 }
+
+.upcoming_events .right_event_section:before {
+position: absolute;
+content: "";
+right: -53px;
+top: -79px;
+opacity: 0.2;
+width: 250px;
+height: 250px;
+background-image: radial-gradient(circle at 50%, #000 2px, #fff 3px);
+background-size: 26px 26px;
+}
+
 .upcoming_events .right_event_section .card {
 background: var(--white);
 border: 1px solid #E3E3E3;
@@ -658,9 +707,9 @@ border-radius: 20px 0 0 20px;
 .upcoming_events .right_event_section .card {
 background-color: #FBFBFD;
 border: 0;
-margin-bottom: 22px;
 z-index: 1;
 }
+.upcoming_events .right_event_section .card:first-child { margin-bottom: 22px; }
 .upcoming_events .right_event_section .right_event_content {
   margin-right: 10px;
 }
@@ -703,22 +752,14 @@ top:40%;
 right: -14px;
 box-shadow: 0px 3px 6px #00000029;
 }
-
 .upcoming_events .right_event_section .card img {
   height: 100%;
   max-height: 202px;
 }
-
-/*.upcoming_events .right_event_section {
-  background-image: url(../img/relaxing_beach_pattern.png);
-background-repeat:no-repeat;
-background-position:100% 100%;
-}*/
-
 .upcoming_events .right_event_section .event_pattern {
 position: absolute;
 top: -72px;
-right: -25px;
+right: -50px;
 }
 /* footer */
 .footer {
@@ -744,16 +785,6 @@ text-align: center;
  padding-top: 40px;
      padding-left: 40px;
 }
-/*footer .pages ul li {
-position: relative;
-}
-.footer .pages ul li:before {
- position: absolute;
-transform: matrix(0, 1, -1, 0, 0, 0);
-background: var(--white);
-content: "";
-}*/
-
 .footer .pages ul li a {
 display: inline-block;
 color: #FBFBFD;
@@ -812,7 +843,6 @@ width: 100%;
 .banner_hero .top_banner_content {
 position: absolute;
 bottom: 30%;
-left: 5%;
 }
 .banner_hero .top_banner_content .banner_heading {
 background: #121319;
@@ -877,6 +907,12 @@ span.play_text {
     top: 58px;
 }
 
+/* mobile toggle button css  */
+.toggle__nav span {
+  font-size:30px;
+  cursor:pointer
+}
+
 @media (min-width: 991px) {
   .toggle__nav, .closebtn {
     display: none;
@@ -904,7 +940,6 @@ span.play_text {
   color: #818181;
   display: block;
   transition: 0.3s;
-
 }
 
 .sidenav a:hover{
@@ -927,9 +962,6 @@ span.play_text {
 
 /*@media (min-width: 1200px) {
 .container { max-width: 1180px; }
-}
-@media (min-width: 1300px) {
-.container { max-width: 1350px; }
 }*/
 @media (min-width: 1200px) {
 .container { max-width: 1350px; }
@@ -947,28 +979,17 @@ span.play_text {
 @media(max-width:1200px){
   .container { max-width:100%; }
 }
-@media (min-width: 1280px) and (max-width: 1350px) {
+/*@media (min-width: 1280px) and (max-width: 1350px) {
  .upcoming_events .right_event_section .card img {
     max-height: 190px;
   } 
- .beach_booking .beach_booking_content .demo_pattern {
-   top: 36px;
-  }
-  div.relaxing_beach_form .search_form {
-    bottom: -4px;
-  }
  .testimonial #myCarousel a.testimonial_btn_prev { left: 8%; } 
  .testimonial #myCarousel a.testimonial_btn_next { right: 8%; } 
- .beach_booking .search_form {
-      max-width: 950px;
-      bottom: -2px;
- }
  .beach_booking .beach_booking_content h2 { font-size: 41px; }
  .ribbon { left: 28%; }
  .footer .copyright { font-size: 12px; }
  .footer .pages { padding-left: 16px; }
-     
-}
+}*/
 /*@media (min-width: 1025px) and (max-width: 1279px) {  
    .main-menu li { padding: 24px 5px; }
 }*/
