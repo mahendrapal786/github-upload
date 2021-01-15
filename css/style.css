@@ -123,15 +123,6 @@ text-decoration: underline rgb(105, 155, 4 , 0.4) 2px;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-/*.welcome_first_item {
-  flex-basis: 40%;
-}
-.welcome_second_item {
-  flex-basis: 30%;
-}
-.welcome_third_item {
-  flex-basis: 30%;
-}*/  
 .special_item {
   display: flex;
   display: -webkit-box;
@@ -261,7 +252,7 @@ position: absolute;
 /* ribbon css start */
 .ribbon {
 position: absolute;
-left: 30%;
+left: 50%;
 margin-top: 34px;
 background: var(--white);
 width: 100%;
@@ -272,6 +263,7 @@ text-align: center;
 max-width: 580px;
 font-weight: bold;
 font-family: 'Playfair Display', serif;
+transform: translateX(-50%);
 }
 .ribbon:before {
     content: '';
@@ -321,13 +313,13 @@ line-height: 26px;
 }
 .home_gallery .top_gallery_area .gallery_top_heading h2 { 
 font-weight: bold;
-font-size: 41px;
+font-size: 42px;
 }
 
 .home_gallery .gallery_cat_tab a.active {
     border-bottom: 2px solid var(--primary);
     border-radius: 0;
-    margin-bottom: -2px;
+    margin-bottom: -3px;
 
 }
 .gallery_cat_links .btn {
@@ -382,12 +374,13 @@ font-size: 41px;
 
 .grid-item {
   float: left;
+   padding: 10px 10px;
 }
 .grid-item img {
   display: block;
   max-width: 100%;
   border-radius: 22px;
-  padding: 10px 10px;
+  width: 100%;
 }
 
 .home_gallery .home_gallery_btn_area {  
@@ -472,7 +465,10 @@ background-size: 26px 26px;
 }
 .beach_booking .search_form {
  bottom: -61px;
+ z-index: 1;
 }
+
+.top_search_form .search_form { bottom: -4px;  z-index: 0; }
 
 .beach_booking .search_form, .top_search_form .search_form { 
 position: absolute;   
@@ -482,7 +478,6 @@ border-radius: 10px;
 box-shadow: 0px 0px 20px #00000029;
 width: 100%;
 padding: 30px 15px;
-z-index: 1;
 left: 0;
 right: 0;
 margin: 0 auto;
@@ -503,16 +498,37 @@ max-width: 1116px;
   box-shadow: none;
   outline: none;
  }
-.beach_booking .search_form svg, .top_search_form .search_form .check_in_col svg { 
+.beach_booking .search_form .check_in_col svg, .top_search_form .search_form .check_in_col svg { 
   position: absolute;
   bottom: 0;
- /* left: 65%;*/
- right: 20%;
+  right: 20%;
 }
-.beach_booking .search_form svg, .top_search_form .search_form .check_out_col svg { 
+.search_form .check_in_col:after {
+border-right: 1px solid #E3E3E3;
+content: "";
+width: 1px;
+height: 100%;
+position: absolute;
+z-index: 1;
+right:35px;
+top:0;
+bottom: 0;
+}
+.search_form .check_out_col:after {
+border-right: 2px dotted #E3E3E3;
+content: "";
+width: 1px;
+height: 100%;
+position: absolute;
+z-index: 1;
+right:45px;
+top:0;
+bottom: 0;
+}
+
+.beach_booking .search_form .check_out_col svg, .top_search_form .search_form .check_out_col svg { 
   position: absolute;
   bottom: 0;
-  /*left: 65%;*/
   right: 20%;
 }
 .beach_booking .search_form label, .top_search_form .search_form label {
@@ -540,9 +556,11 @@ background-color: var(--primary);
 }
 .check_in_col {
   padding-left:10px !important;
+  position: relative;
 }
 .check_out_col {
   padding-left:10px !important;
+   position: relative;
 }
 /* testimoanial  */
 .testimonial {
@@ -631,10 +649,11 @@ font-size: 52px;
 }
 .upcoming_events .left_event_section .left_event_content {
 position: absolute;
-left:4%;
+left:0;
 right: 8%;
 bottom: 10%;
 color: var(--white);
+padding-left: 30px;
 }
 .upcoming_events .left_event_section .left_event_content h3 {
 font-family: 'Poppins', sans-serif;
@@ -677,7 +696,7 @@ position: absolute;
 background: #699B04;
 width: 5px;
 height: 64px;
-left: -26px;
+left: 0;
 }
 
 .upcoming_events .right_event_section:before {
@@ -712,10 +731,6 @@ z-index: 1;
 .upcoming_events .right_event_section .card:first-child { margin-bottom: 22px; }
 .upcoming_events .right_event_section .right_event_content {
   margin-right: 10px;
-}
-
-.upcoming_events .right_event_section .card .row {
-  align-items: center;
 }
 
 .upcoming_events .right_event_section .right_event_content h3 {
@@ -845,13 +860,14 @@ position: absolute;
 bottom: 30%;
 }
 .banner_hero .top_banner_content .banner_heading {
-background: #121319;
+    /*background: #121319;*/
+    background: rgb(18, 19, 25 , 0.6);
     font-family: 'Poppins', sans-serif;
     border-radius: 10px;
     padding: 10px 20px;
     color: #FBFBFD;
     font-size: 42px;
-    opacity: 0.6;
+    /*opacity: 0.6;*/
 }
 .banner_hero .top_banner_content .banner_title {
     font-size: 80px;
@@ -918,78 +934,244 @@ span.play_text {
     display: none;
   }
 }
-@media (max-width: 991px) {
- 
- .sidenav {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  transition: 0.5s;
-  text-align:center;
-}
-
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-.sidenav a:hover{
-  color: #f1f1f1;
-}
-
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-}
 
 @media screen and (max-height: 450px) {
   /*.sidenav {padding-top: 15px;}*/
   .sidenav a {font-size: 18px;}
 }
 
-/*@media (min-width: 1200px) {
-.container { max-width: 1180px; }
-}*/
 @media (min-width: 1200px) {
 .container { max-width: 1350px; }
 }
 /* responsive */
-/*@media (min-width: 1281px) { 
-
-}*/
-/*@media (min-width: 1281px) {
-  .special_content p { font-size: 16px; } 
-  .welcome div.welcome_area .welcome_content {
-     padding-left: 16px;
-  }
-}*/
 @media(max-width:1200px){
   .container { max-width:100%; }
 }
-/*@media (min-width: 1280px) and (max-width: 1350px) {
- .upcoming_events .right_event_section .card img {
-    max-height: 190px;
-  } 
- .testimonial #myCarousel a.testimonial_btn_prev { left: 8%; } 
- .testimonial #myCarousel a.testimonial_btn_next { right: 8%; } 
- .beach_booking .beach_booking_content h2 { font-size: 41px; }
- .ribbon { left: 28%; }
- .footer .copyright { font-size: 12px; }
- .footer .pages { padding-left: 16px; }
-}*/
-/*@media (min-width: 1025px) and (max-width: 1279px) {  
-   .main-menu li { padding: 24px 5px; }
+@media (max-width: 1350px) {
+  .upcoming_events .right_event_section .card img { max-height: 193px; }
+  .upcoming_events .right_event_section .right_event_content span { top: 25px; }
+  .upcoming_events .right_event_section .right_event_content h3 { padding-top: 33px; }
+  .upcoming_events .right_event_section .right_event_content p {  line-height: 1.6;  }
+  .testimonial #myCarousel a.testimonial_btn_prev { left: 10%; } 
+  .testimonial #myCarousel a.testimonial_btn_next { right: 10%; } 
+}
+
+@media (max-width: 1279px) {
+   .footer .pages { padding-left: 34px; }
+   .footer .pages ul li a { margin: 2px 9px; }
+   .footer .pages ul li a { margin: 2px 9px; }
+   .testimonial #myCarousel a.testimonial_btn_prev { left: 8%; } 
+   .testimonial #myCarousel a.testimonial_btn_next { right: 8%; } 
+   .beach_booking .beach_booking_content h2 { font-size: 42px; }
+   .beach_booking .search_form, .top_search_form .search_form { max-width: 980px; }
+   .upcoming_events .right_event_section .card img {  max-height: 193px; }
+   .upcoming_events .right_event_section .right_event_content span { top: 25px; }
+   .upcoming_events .right_event_section .right_event_content h3 { padding-top: 33px; }
+   .upcoming_events .right_event_section .right_event_content p {  line-height: 1.6;  }
+   .upcoming_events .left_event_section { height: 100%; }
+   .upcoming_events .left_event_section .card { height: 100%; }
+   .upcoming_events .left_event_section .card figure { height: 100%; margin: 0; }
+   .upcoming_events .left_event_section .card figure img { height: 100%; width: 100%; }
+}
+
+@media (max-width: 1199px) {
+  /* header nav section */  
+  .navbar-expand-md .navbar-nav .nav-link { padding-right:0; }
+  /* header banner section */
+  .banner_hero .top_banner_content { bottom: 26%; }
+  .banner_hero .top_banner_content .banner_heading { font-size: 35px; }
+  .banner_hero .top_banner_content .banner_title { font-size: 65px; }
+  .beach_booking .search_form, .top_search_form .search_form { max-width: 850px; } 
+  .beach_booking .search_form input, .top_search_form .search_form input { font-size: 17px; }
+  .search_form .check_in_col:after { right: 24px; }
+  .search_form .check_out_col:after { right: 32px; }
+  /* Specialty section */
+  .title_ele p { font-size: 36px; }
+  .title_ele h2 { font-size: 42px;  }
+  .special_content p { font-size: 15px;  }
+
+  /* welcome section */
+  .welcome div.welcome_area .welcome_content h2 { font-size: 42px;  }
+  
+  /*relaxing beach section */
+  .relaxing_beach_form:after { 
+    bottom: -109px;
+    width: 200px;
+    height: 200px;     
+    background-size: 20px 20px; 
+  }
+
+  /* testimonial section */ 
+   .testimonial .carousel-inner { max-width: 70%; }
+   .testimonial .testimonial_heading { font-size: 42px; }
+  /*event section   */
+  .upcoming_events .right_event_section:before { display: none; }
+  .upcoming_events .right_event_section .right_event_content  {
+    width: calc(100% - 46px);
+  }
+  .upcoming_events .right_event_section .right_event_content .right_event_btn {
+    right: 0px;
+  }
+  .upcoming_events .right_event_section .right_event_content p { padding-right: 0; }
+  .upcoming_events .right_event_section .card img { max-height: 215px; }
+  .upcoming_events .top_heading h2 { font-size:42px; }
+  /* footer  */
+  .footer .pages { padding-left: 0; }
+  .footer .address a.phone { font-size: 26px; }
+  .footer .pages ul li a { font-size: 14px; }
+  .footer .address p.address_text { font-size: 14px; }
+  .footer .copyright:before { left: -352px; width: 331px; }
+}
+
+@media (max-width: 991px) { 
+   /* header nav section */
+ .sidenav {
+  height: 100%;
+  width: 290px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right:-370px;
+  background-color: #fff;
+  overflow-x: hidden;
+  transition: 0.5s;
+ /* text-align:center;*/
+  padding: 64px 0 0;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .sidenav a:hover{
+    color: var(--black);
+  }
+  .sidenav .book_stay a:hover{
+    color: var(--white);
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+ .opensidenav { right: 0; } 
+  .navbar-nav {
+  display: block;
+  line-height: 24px;
+ }
+
+ .toggle__nav {
+      padding: 0 11px;
+      margin: 7px 0;
+      background-color: var(--primary);
+   }
+ .toggle__nav span { color: var(--white); }
+ .main-menu li a:hover:before { display: none; }
+ .main-menu li { border-bottom: 1px solid rgb(105, 155, 4, 0.6);  }
+ .main-menu .book_stay { margin-left:0; }
+ 
+ /* banner section */
+ .banner_hero .top_banner_content { bottom: 20%; }
+ .banner_hero .top_banner_content .banner_heading { font-size: 22px; }
+ .banner_hero .top_banner_content .banner_title  { font-size: 50px; }
+
+ .beach_booking .search_form, .top_search_form .search_form { max-width: 680px; }
+ .search_form .check_in_col:after { display: none; }
+ .search_form .check_out_col:after { display: none; }
+ .beach_booking .search_form label, .top_search_form .search_form label { font-size: 16px;  }
+ .beach_booking .search_form input, .top_search_form .search_form input { font-size: 16px; width: 100%; }
+ .beach_booking .search_form .check_in_col svg, .top_search_form .search_form .check_in_col svg { 
+   width: 45px; right: 7%; }
+ .beach_booking .search_form .check_out_col svg, .top_search_form .search_form .check_out_col svg { 
+   width: 45px; right: 7%; }
+   .search_form_btn { font-size: 16px; padding: 11px 22px; }
+   .beach_booking .search_form, .top_search_form .search_form { padding: 20px 15px; }
+ .top_search_form .search_form { bottom: 7px; }
+       
+
+  /* Specialty section */
+  .welcome_first_item { 
+    width: 100%;
+    display: flex; 
+   }
+   .welcome_second_item { 
+    width: 100%;
+    display: flex; 
+   }
+    .welcome_third_item { 
+    width: 100%;
+    display: flex; 
+   }
+   .special_item { width: 50%; }
+
+   /* welcome section  */
+   .welcome div.welcome_area .welcome_content h2 { font-size: 34px; }
+   .welcome div.welcome_area .welcome_img .welcome_img_area:before { display: none; }
+   .welcome .welcome_img .welcome_img_area a.explore_goa_btn { 
+     left: 57%;
+     bottom: 11%;
+     padding: 10px 21px;
+     font-size: 14px;
+   }
+   .welcome div.welcome_area .welcome_content a.book_stay_btn {
+    font-size: 14px;
+    padding: 10px 21px;
+   }
+   .welcome div.welcome_area .welcome_content p { font-size: 14px; }
+   .welcome_img { position: sticky; top: 0; height: 100%; } 
+
+   /* best beach section */
+   .ribbon { max-width: 426px; font-size: 30px; }
+   .best_beach_cottages .best_beach_content p { font-size: 14px;  }
+   .best_beach_cottages .best_beach_content .best_beach_btn { font-size: 14px; padding: 10px 21px; }
+   /* gallery section  */
+   .home_gallery .top_gallery_area .gallery_top_heading h2 { font-size: 34px; }
+
+   /* relaxing beach section  */
+   .beach_booking .beach_booking_content h2 { font-size: 34px;  }
+   .beach_booking .beach_booking_content p { font-size: 14px; }
+   .beach_booking .beach_booking_img:after { top: -12px; left: -10px; }
+   .beach_booking_img {     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; }
+
+   /* testimonial section */
+   .testimonial .testimonial_heading { font-size: 34px; }
+   .testimonial #myCarousel a.testimonial_btn_prev { left: 6%; }
+   .testimonial #myCarousel a.testimonial_btn_next { right: 6%; }
+   .carousel-inner .carousel-item p { font-size: 14px; }
+   .testimonial .tripadvisor img { width: 150px; }
+
+   /* upcoming event section  */
+   .upcoming_events .top_heading h2 { font-size: 34px; }
+   /*.upcoming_events .right_event_section .right_event_content span { top: 30px; }
+   .upcoming_events .right_event_section .right_event_content h3 { padding-top: 40px; }
+   .upcoming_events .featured_blog_area { margin-bottom: 20px; }
+   .upcoming_events .right_event_section .card img { width: 100%; }
+   .upcoming_events .right_event_section .right_event_content { margin-top: 14px; }*/
+   .upcoming_events .right_event_section { margin-top: 30px; }
+   .upcoming_events .right_event_section .card img { width: 100%; border-top-right-radius:20px; border-bottom-left-radius:0px; }
+   .upcoming_events .right_event_section .right_event_content { width: 100%; }
+   .upcoming_events .right_event_section .right_event_content .right_event_btn { right: 50px;
+    top: 20px; }
+    .upcoming_events .right_event_section .right_event_content span { margin-left: 20px;  }
+    .upcoming_events .right_event_section .right_event_content h3 { padding-left: 20px; }
+    .upcoming_events .right_event_section .right_event_content p { padding-left: 20px; }
+    .upcoming_events .right_event_section .card img { width: 100%;  }
+
+   /* footer section */
+   .footer .address a.phone { font-size: 19px; }
+   .footer .pages ul li a { margin: 2px 3px; }
+}
+
+/*@media (max-width: 767px) {
+
 }*/
