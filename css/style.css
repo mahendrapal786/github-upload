@@ -1035,7 +1035,6 @@ span.play_text {
   background-color: #fff;
   overflow-x: hidden;
   transition: 0.5s;
- /* text-align:center;*/
   padding: 64px 0 0;
   }
 
@@ -1092,7 +1091,7 @@ span.play_text {
    width: 45px; right: 7%; }
  .beach_booking .search_form .check_out_col svg, .top_search_form .search_form .check_out_col svg { 
    width: 45px; right: 7%; }
-   .search_form_btn { font-size: 16px; padding: 11px 22px; }
+   .beach_booking .search_form .search_form_btn, .top_search_form .search_form .search_form_btn { font-size: 16px; padding: 11px 22px; }
    .beach_booking .search_form, .top_search_form .search_form { padding: 20px 15px; }
  .top_search_form .search_form { bottom: 7px; }
        
@@ -1152,11 +1151,6 @@ span.play_text {
 
    /* upcoming event section  */
    .upcoming_events .top_heading h2 { font-size: 34px; }
-   /*.upcoming_events .right_event_section .right_event_content span { top: 30px; }
-   .upcoming_events .right_event_section .right_event_content h3 { padding-top: 40px; }
-   .upcoming_events .featured_blog_area { margin-bottom: 20px; }
-   .upcoming_events .right_event_section .card img { width: 100%; }
-   .upcoming_events .right_event_section .right_event_content { margin-top: 14px; }*/
    .upcoming_events .right_event_section { margin-top: 30px; }
    .upcoming_events .right_event_section .card img { width: 100%; border-top-right-radius:20px; border-bottom-left-radius:0px; }
    .upcoming_events .right_event_section .right_event_content { width: 100%; }
@@ -1172,6 +1166,58 @@ span.play_text {
    .footer .pages ul li a { margin: 2px 3px; }
 }
 
-/*@media (max-width: 767px) {
+@media (max-width: 767px) {
+ /* header nav section */
+ .opensidenav { width: 100%; }
+ .sidenav .closebtn { z-index: 1; }
+  .logo img { width: 108px; }
+ /* banner section */
+ .beach_booking .search_form input, .top_search_form .search_form input { font-size: 14px; }
+ .beach_booking .search_form label, .top_search_form .search_form label { font-size: 14px; }
+ .beach_booking .search_form, .top_search_form .search_form { padding: 15px 15px; }
+ .beach_booking .search_form, .top_search_form .search_form { max-width: 480px !important; }
 
-}*/
+ .beach_booking .search_form .search_form_btn, .top_search_form .search_form .search_form_btn { padding: 10px 14px;     font-size: 14px; }
+  .beach_booking .search_form .check_in_col svg, .top_search_form .search_form .check_in_col svg {
+    width: 32px;  right: 0px; bottom: 12px; }
+  .beach_booking .search_form .check_out_col svg, .top_search_form .search_form .check_out_col svg {
+     width: 32px; bottom: 12px; }
+  .banner_hero .top_banner_content .banner_heading { font-size: 18px; }
+ .banner_hero .top_banner_content .banner_title { font-size: 32px; text-shadow:none; }
+ .banner_hero .top_banner_content .play_circle { height: 50px;
+    width: 50px; }
+ .banner_hero .top_banner_content .play_circle::before { width: 35px; height: 35px; } 
+ .banner_hero .top_banner_content .play_circle svg { top: 18px; z-index: 0; } 
+ .top_banner_content span.play_text  { left: 60px; bottom: 19px; font-size: 18px; }
+
+ /* Specialty section */
+ .title_ele p { font-size: 26px; }
+ .title_ele h2 { font-size: 32px; }
+
+ .special_content p { font-size: 12px; }
+ .special_item { padding-left: 15px; padding-right: 15px; }
+ .special_img img { max-width: 30px; }
+ .welcome_first_item { margin-left: -15px; margin-right: -15px; } 
+ .welcome_second_item { margin-left: -15px; margin-right: -15px; } 
+ .welcome_third_item { margin-left: -15px; margin-right: -15px; } 
+  /* welcome section  */
+  .welcome div.welcome_area .welcome_content h2 { font-size: 27px; }
+  .welcome div.welcome_area .welcome_content strong { font-size: 14px;  }
+  .welcome .welcome_img .welcome_img_area a.explore_goa_btn { display: none; } 
+  .welcome div.welcome_area .welcome_content a.book_stay_btn { padding: 10px 14px; }
+
+  /* best beach section */
+  /* gallery section */
+  .home_gallery .top_gallery_area .gallery_top_heading h2 { font-size: 26px; }
+  .home_gallery .top_gallery_area .gallery_top_heading p { font-size: 14px; }
+  .gallery_cat_tab .gallery_cat_links a { font-size: 14px; }
+  .home_gallery .home_gallery_btn_area .view_gallery_btn { padding: 10px 14px; font-size: 14px; }
+  .home_gallery .home_gallery_btn_area .view_gallery_btn svg { width: 18px; }
+
+  /* relaxing beach section  */
+  .beach_booking .beach_booking_content h2 { font-size: 26px; }
+
+  /* testimonial section  */
+  .testimonial { min-height: 500px; }
+  .testimonial .testimonial_heading { font-size: 26px; padding-top: 50px; }
+}
